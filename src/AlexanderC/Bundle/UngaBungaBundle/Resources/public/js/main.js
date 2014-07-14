@@ -156,7 +156,7 @@ jQuery(function($) {
                     applicationForm.find('.item:not(:first)').remove();
                     applicationForm.find('form')[0].reset();
                     applicationForm.find('.item').find('.ik').ikSelect("reset");
-                    calc.init();                    
+                    calc.init();
 				}
 			},
 			error: function() {

@@ -6,5 +6,8 @@ customer_show:
     pattern:  /{id}/show
     defaults: { _controller: "UngaBungaBundle:Customer:show" }
 
+customer_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "UngaBungaBundle:Customer:delete" }
 
 

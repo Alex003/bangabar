@@ -54,4 +54,24 @@ class CustomerController extends Controller
             'closedApplicationsCount' => $closedApplicationsCount
         ));
     }
+
+    /**
+     * Deletes a Customer entity.
+     *
+     */
+    public function deleteAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $entity = $em->getRepository('UngaBungaBundle:Customer')->find($id);
+
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find Customer entity.');
+        }
+
+        $em->remove($entity);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl('customer'));
+    }
 }

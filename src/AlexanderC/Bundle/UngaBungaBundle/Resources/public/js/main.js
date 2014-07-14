@@ -101,6 +101,17 @@ jQuery(function($) {
 	applicationForm.find('input[type="submit"]').on('click', function(e){
 		e.preventDefault();
 
+        if( jQuery('span.total-price .value').text() == 0)
+        {
+            // popup
+            var checkout = $('.popup-wrapper .popup.checkout_order');
+
+            $('.popup-wrapper').fadeIn();
+            checkout.fadeIn();
+            return false;
+        }
+
+
 		var data = applicationForm.find('form').serialize();
 		$.ajax({
 			url: ajax_url.checkout,
@@ -110,20 +121,20 @@ jQuery(function($) {
 				if(data.code == 1) {
 					console.log(data.error);
 				} else {
-					// popup
-					var checkout = $('.popup-wrapper .popup.checkout_form');
-					var total_price = 0;
-					var items = '';
+                    // popup
+                    var checkout = $('.popup-wrapper .popup.checkout_form');
+                    var total_price = 0;
+                    var items = '';
 
-					$('.popup-wrapper').fadeIn();
-					checkout.fadeIn();
-					checkout.find('.order-number .value').text(data.data.uniqueIdx);
-					checkout.find('.wallet').text(data.data.wallet);
+                    $('.popup-wrapper').fadeIn();
+                    checkout.fadeIn();
+                    checkout.find('.order-number .value').text(data.data.uniqueIdx);
+                    checkout.find('.wallet').text(data.data.wallet);
 
-					for(var i = 0; i < data.applicationData.length; i++) {
+                    for(var i = 0; i < data.applicationData.length; i++) {
 
-						total_price += data.applicationData[i]['totalPrice'];
-						items += ' <div class="position"> 																	\
+                    total_price += data.applicationData[i]['totalPrice'];
+                    items += ' <div class="position"> 																	\
 										<div class="title"> 																\
 											'+ data.applicationData[i]['productName']+'										\
 									</div> 																					\
@@ -134,18 +145,18 @@ jQuery(function($) {
 											'+ data.applicationData[i]['totalPrice']+' руб. 		\
 										</div> 																				\
 									</div>';
-					}
+                        }
 
-					checkout.find('.positions' ).append($(items));
-					checkout.find('.total-price .value').text(total_price);
-					checkout.find('.delivery-point').text(data.data.deliveryPointName);
+                    checkout.find('.positions' ).append($(items));
+                    checkout.find('.total-price .value').text(total_price);
+                    checkout.find('.delivery-point').text(data.data.deliveryPointName);
                     //checkout.find('.delivery-point-info').html(data.data.deliveryPointDescription);
 
                     // reset form
                     applicationForm.find('.item:not(:first)').remove();
                     applicationForm.find('form')[0].reset();
                     applicationForm.find('.item').find('.ik').ikSelect("reset");
-                    calc.init();
+                    calc.init();                    
 				}
 			},
 			error: function() {

@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <section id="content-main">
+        <div class="separator" style='text-transform: none'>Поздравляем, вы вступили в клуб Banga Bar!</div>
+
+        <div class="content-wrapper">
+            <h2 style='text-transform: none'>После авторизации вам будет доступен новый раздел в меню  - “Магазин”.<br/>
+                В ближайшее время вы получите на почту всю подробную информацию.</h2>
+
+            <a class="button button-green action-login" href="{{ path('customer_login') }}">
+                Войти
+            </a>
+        </div>
+    </section>
+{% endblock %}

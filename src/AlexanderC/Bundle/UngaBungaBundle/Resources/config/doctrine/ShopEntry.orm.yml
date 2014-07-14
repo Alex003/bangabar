@@ -1,0 +1,56 @@
+AlexanderC\Bundle\UngaBungaBundle\Entity\ShopEntry:
+    type:  entity
+    repositoryClass: AlexanderC\Bundle\UngaBungaBundle\Repository\ShopEntryRepository
+    table: shop_entry
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+          type: string
+          length: 255
+          nullable: false
+        price:
+          type: integer
+          nullable: false
+        image_url:
+          type: string
+          length: 255
+          nullable: false
+        sale:
+          type: boolean
+          nullable: false
+          default: false
+        bestseller:
+          type: boolean
+          nullable: false
+          default: false
+        slug:
+          type: string
+          length: 255
+          gedmo:
+            slug:
+              separator: -
+              #style: camel
+              updateable: false
+              unique: true
+              fields:
+                - title
+        created:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: create
+        updated:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: update
+    indexes:
+        shop_entry_slug_idx:
+          columns: [slug]
+        shop_entry_price_idx:
+          columns: [price]
+

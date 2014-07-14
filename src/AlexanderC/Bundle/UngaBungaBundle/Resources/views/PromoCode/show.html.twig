@@ -1,0 +1,45 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{{ path('promocode') }}">
+                Промо коды
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('promocode_new') }}">
+                Добавить промо код
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('promocode_edit', { 'id': entity.id }) }}">
+                Редактировать текущий промо код
+            </a>
+        </li>
+        <li class="active">Просмотр промо кода</li>
+    </ul>
+
+    <table class="table table-hover">
+        <tbody>
+            <tr>
+                <th>Код</th>
+                <td>{{ entity.code }}</td>
+            </tr>
+            <tr>
+                <th>Описание</th>
+                <td>{{ entity.description }}</td>
+            </tr>
+            <tr>
+                <th>Создан</th>
+                <td>{{ entity.created|date('d.m.Y H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Обновлен</th>
+                <td>{{ entity.updated|date('d.m.Y H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    {{ form(delete_form) }}
+{% endblock %}

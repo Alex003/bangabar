@@ -1,0 +1,52 @@
+AlexanderC\Bundle\UngaBungaBundle\Entity\ApplicationReplySubject:
+    type:  entity
+    repositoryClass: AlexanderC\Bundle\UngaBungaBundle\Repository\ApplicationReplySubjectRepository
+    table: application_reply_subject
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+          type: string
+          length: 255
+          nullable: false
+          unique: true
+        subject:
+          type: string
+          length: 255
+          nullable: false
+        assigned_text:
+          type: text
+          nullable: true
+        slug:
+          type: string
+          length: 255
+          gedmo:
+            slug:
+              separator: -
+              #style: camel
+              updateable: false
+              unique: true
+              fields:
+                - name
+        created:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: create
+        updated:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: update
+    indexes:
+        application_reply_subject_slug_idx:
+          columns: [slug]
+    oneToMany:
+          replies:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\ApplicationReply
+            mappedBy: subject
+            cascade: ["all"]
+

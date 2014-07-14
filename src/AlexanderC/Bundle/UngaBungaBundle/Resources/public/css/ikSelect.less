@@ -1,0 +1,90 @@
+.ik_select {
+	/*
+	Wraps all the plugin's HTML code.
+	Probably you should not add any styles here
+	*/
+}
+.ik_select_link{
+	/* Fake select you click on to open the dropdown */
+}
+.ik_select_link_focus{
+	/* Focused state of the fake select */
+}
+.ik_select_link_disabled{
+	/* Disabled state of the fake select */
+}
+.ik_select_link_text {
+	/*
+	Wrapper for the text inside the link.
+	It's best to add some width limiting rules here like
+	display:block;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	*/
+	background: #ffffff url(../img/arrow-bottom.png) no-repeat 285px 50%;
+	.box-sizing();
+	width: 310px;
+	height: 47px;
+	border: 2px solid #e3e4e8;
+	.rounded(5px);
+	padding: 14px 30px 14px 15px;
+	overflow:hidden;
+	cursor: pointer;
+}
+
+.ik_select_block{
+	/*
+	Dropdown wrapper. Needed for script calculations.
+	You should not add any visual styles here.
+	You can shift the position of the dropdown
+	by changing top and left values like
+	top: -2px;
+	left: -5px;
+	*/
+}
+.ik_select_list{
+	/*
+	Wrapper for the options list.
+	Now that's a good place to add visual styles.
+	*/
+//	border-top: 1px solid #e3e4e8;
+	border-right: 1px solid #e3e4e8;
+	border-left: 1px solid #e3e4e8;
+	border-bottom: 1px solid #e3e4e8;
+	.rounded(5px);
+	background: #fff;
+}
+.ik_select_optgroup {
+	/* Optgroup */
+}
+.ik_select_optgroup_label{
+	/* Optgroup label */
+}
+.ik_select_option {
+	/* Option */
+	padding: 8px 15px;
+	font-family: 'Open Sans', serif;
+	.font-shorthand(normal, 12px, 1, 1);
+	text-transform: uppercase;
+	white-space:nowrap;
+}
+.ik_select_hover{
+	/* The hovered state of an option */
+	background: #75ad5e;
+	color: #fff;
+	.transition(color 100ms linear);
+}
+.ik_select_active {
+	/* The active state of an option */
+}
+
+.ik_select_filter_wrap {
+	/* Wrapper for the filter input */
+}
+.ik_select_filter{
+	/* Filter input */
+}
+.ik_nothing_found {
+	/* Block that's shown when there's nothing found. */
+}

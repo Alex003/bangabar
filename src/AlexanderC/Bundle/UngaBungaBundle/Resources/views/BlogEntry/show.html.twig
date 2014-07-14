@@ -1,0 +1,52 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{{ path('blogentry') }}">
+                Посты
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('blogentry_new') }}">
+                Добавить Пост
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('blogentry_edit', { 'id': entity.id }) }}">
+                Редактировать текущий пост
+            </a>
+        </li>
+        <li>Просмотр поста</li>
+    </ul>
+
+    <table class="record_properties table table-hover">
+        <tbody>
+            <tr>
+                <th>Заголовок</th>
+                <td>{{ entity.title }}</td>
+            </tr>
+            <tr>
+                <th>Текст</th>
+                <td>{{ entity.text }}</td>
+            </tr>
+            <tr>
+                <th>Виден на главной</th>
+                <td>
+                    {% if entity.onHomepage %}
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    {% else %}
+                        <span class="glyphicon glyphicon-eye-close"></span>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Обновлено</th>
+                <td>{{ entity.updated|date('d.m.Y H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+    {{ form(delete_form) }}
+
+
+{% endblock %}

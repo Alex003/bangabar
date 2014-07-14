@@ -1,0 +1,45 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="record_actions breadcrumb">
+        <li>
+            <a href="{{ path('supervisor') }}">
+                Супервайзеры
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('supervisor_new') }}">
+                Добавить супервайзера
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('supervisor_edit', { 'id': entity.id }) }}">
+                Редактировать текущего супервайзера
+            </a>
+        </li>
+        <li class="active">Просмотр супервайзера</li>
+    </ul>
+
+    <table class="record_properties table table-hover">
+        <tbody>
+            <tr>
+                <th>Эл. почта</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th>Логин</th>
+                <td>{{ entity.nick }}</td>
+            </tr>
+            <tr>
+                <th>Добавлен</th>
+                <td>{{ entity.created|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Обновлено</th>
+                <td>{{ entity.updated|date('Y-m-d H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+{% endblock %}

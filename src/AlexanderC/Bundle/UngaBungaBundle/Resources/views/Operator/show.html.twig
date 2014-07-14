@@ -1,0 +1,67 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="record_actions breadcrumb">
+        <li>
+            <a href="{{ path('operator') }}">
+                Операторы
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('operator_new') }}">
+                Добавить оператора
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('operator_edit', { 'id': entity.id }) }}">
+                Редактировать текущего оператора
+            </a>
+        </li>
+        <li class="active">Просмотр оператора</li>
+    </ul>
+
+    <table class="record_properties table table-hover">
+        <tbody>
+            <tr>
+                <th>Эл. почта</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th>Логин</th>
+                <td>{{ entity.nick }}</td>
+            </tr>
+            <tr>
+                <th>Кошелек</th>
+                <td>{{ entity.wallet }}</td>
+            </tr>
+            <tr>
+                <th>Кол-во заявок</th>
+                <td>{{ entity.appsCount }}</td>
+            </tr>
+            <tr>
+                <th>Закрыто Заявок</th>
+                <td>{{ entity.closedAppsCount }}</td>
+            </tr>
+            <tr>
+                <th>Активный</th>
+                <td>
+                    {% if entity.active %}
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    {% else %}
+                        <span class="glyphicon glyphicon-eye-close"></span>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Добавлен</th>
+                <td>{{ entity.created|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Обновлено</th>
+                <td>{{ entity.updated|date('Y-m-d H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+{% endblock %}

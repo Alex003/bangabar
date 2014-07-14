@@ -1,0 +1,27 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{{ path('supervisor') }}">
+                Супервайзеры
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('supervisor_new') }}">
+                Добавить супервайзера
+            </a>
+        </li>
+        <li class="active">Редактирование супервайзера</li>
+    </ul>
+
+    <div class="col-md-4 column">
+        {{ form(edit_form) }}
+        <br/>
+        <ul class="record_actions list-inline">
+            <li>{{ form(delete_form) }}</li>
+        </ul>
+    </div>
+
+
+{% endblock %}

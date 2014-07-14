@@ -1,0 +1,26 @@
+{% set totalPrice = 0 %}
+
+<h1>Здравствуйте {{ application.operator.nick }}, получена новая заявка.</h1>
+
+<p><small>[{{ application.created|date("H:i:s d M Y") }}]</small></p>
+
+<p>
+    Детали Заказа:
+<ol>
+    <li>Номер Заказа: {{ application.uniqueIdx }}</li>
+    <li>Номер Кошелька для оплаты: {{ application.operator.wallet }}</li>
+    <li>Пункт выдачи: {{ application.deliveryPoint.name }}</li>
+    <li>Перечень заказанных позиций:
+        <ul>
+            {% for data in application.data %}
+                {% set itemPrice = data.shopEntry.price * data.quantity %}
+                {% set totalPrice = totalPrice + itemPrice %}
+                <li>{{ data.quantity }} x {{ data.shopEntry.title }} = {{ itemPrice }} руб.</li>
+            {% endfor %}
+        </ul>
+    </li>
+    <li>Общая стоимость: {{ totalPrice }} руб.</li>
+</ol>
+</p>
+
+<p><a href="http://ch45fsw.tk{{ path('application_reply_create', {'uniqueIdx': application.uniqueIdx}) }}">Для ответа на заявку- перейдите по ссылке!</a></p>

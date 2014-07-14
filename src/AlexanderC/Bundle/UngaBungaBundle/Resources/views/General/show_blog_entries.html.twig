@@ -1,0 +1,55 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    {% set nextOffset = 0 %}
+
+    <div class="separator">
+        <span class="disabled">Блоги</span>
+        <span class="disabled sep">/</span>
+        <a href="{{ path('blog_category_entries', {'offset': app.request.get('offset'), 'slug': app.request.get('slug')}) }}">{{ blogCategory.name }}</a>
+    </div>
+
+    <section id="content-main">
+        <section class="posts">
+            {% for entry in blogEntries %}
+                {% set nextOffset = entry.id %}
+                <article class="post cf">
+                    <figure class="featured left">
+                        <img src="{{ entry.imageurl }}" alt="">
+                        <figcaption class="hover">
+                            <a class="preview-link animated fast" href="{{ path('blog_entry_show', {'year': entry.created|date('Y-m-d'), 'slug': entry.slug}) }}">Preview</a>
+                        </figcaption>
+                    </figure>
+                    <div class="preview right">
+                        <h2><a href="{{ path('blog_entry_show', {'year': entry.created|date('Y-m-d'), 'slug': entry.slug}) }}" title="">{{ entry.title }}</a></h2>
+                        <div class="content">
+                            <p>
+                                {{ entry.text|striptags()[:850]|raw }}...
+                            </p>
+                        </div>
+                        <div class="meta">
+                            <time pubtime="php time('c')" class="date">{{ entry.created|date('d.m.Y') }}</time>
+                        </div>
+                    </div>
+                </article>
+
+            {% endfor %}
+
+            <nav class="pagination">
+                <a class="page prev" href="javascript:history.go(-1)"><span class="icon arrow-left"></span></a>
+                {#<a class="page active" href="#">1</a>#}
+                {#<a class="page" href="#">2</a>#}
+                {#<a class="page" href="#">3</a>#}
+                {#<a class="page" href="#">4</a>#}
+                {#<a class="page" href="#">5</a>#}
+                {#<a class="page" href="#">6</a>#}
+                {#<span class="page dots" href="#">...</span>#}
+                {#<a class="page" href="#">22</a>#}
+                {#<a class="page" href="#">23</a>#}
+                {#<a class="page" href="#">24</a>#}
+                <a class="page next" href="{{ path('blog_category_entries', {'offset': nextOffset, 'slug': app.request.get('slug')}) }}"><span class="icon arrow-right"></span></a>
+            </nav>
+
+        </section>
+    </section>
+{% endblock %}

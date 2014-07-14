@@ -1,0 +1,158 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    {% set customerInfo = app.session.get('customer') %}
+
+    {#<h3><a href="{{ path('application_checkout') }}">Product Checkout</a></h3>#}
+
+    <section class="shop cf">
+        {% for entry in shopEntries %}
+            <article class="item">
+                <figure class="thumbnail">
+                    <img src="{{ entry.imageUrl }}" alt=""/>
+                    <figcaption>
+                        <h2 class="title">{{ entry.title }}</h2>
+                        <div class="price">{{ entry.price }} руб.</div>
+                    </figcaption>
+                </figure>
+
+                {% if entry.sale %}<div class="bage sale"></div>{% endif %}
+                {% if entry.bestseller %}<div class="bage bestseller"></div>{% endif %}
+            </article>
+        {% endfor %}
+    </section>
+
+    <section id="application-form" class="application-form">
+        <div class="wrap">
+            <div class="separator center-text">
+                Оформить заявку
+            </div>
+
+            <div class="form" method="POST">
+                <form action="">
+                    <div class="item-list cf">
+                        <label class="select-items left" for="item">Выберите продукт</label>
+                        <div class="items right cf">
+                            <div class="item cf">
+                                <div class="item-name left">
+                                    <select class="ik" name="product[]" id="item">
+                                        {% for entry in shopEntries %}
+                                            <option value="{{ entry.id }}" data-price="{{ entry.price }}">{{ entry.title }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+
+                                <div class="item-quantity integer left">
+                                    <input class="quantity" type="text" name="quantity[]" value="0"/> <span>штук</span>
+                                    <!--<span>штук</span>-->
+                                    <a class="inc" href="#">+</a>
+                                    <a class="dec" href="#">-</a>
+                                </div>
+
+                                <div class="price right">
+                                    <span class="value">0</span> руб.
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="cf"></div>
+                        <div class="new-position cf">
+                            <a class="action-add-new-item" href="#">Добавить позицию</a>
+                        </div>
+
+                    </div>
+
+                    <div class="total">
+                        Итого к оплате: <span class="total-price"> <span class="value">5600</span> руб.</span>
+                    </div>
+
+                    <div class="delivery cf">
+                        <div class="delivery-point left cf">
+                            <label for="delivery-point" class="left">Выберите пункт выдачи:</label>
+                            <select class="ik left" name="delivery" id="delivery-point">
+                                {% for entry in deliveryPoints %}
+                                    <option value="{{ entry.id }}">{{ entry.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="email right">
+                            <label for="email" class="left">Ваш E-MAIL:</label>
+                            <input id="email" name="email" type="email" value="{{ customerInfo.email }}"/>
+                        </div>
+                    </div>
+
+                    <div class="submit center-text">
+                        <input type="submit" value="Отправить заявку"/>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="delivery-points" class="separator center-text">
+        Пункты выдачи
+    </div>
+
+    <div class="content-wrapper">
+        {% for point in deliveryPoints %}
+            <h2>{{ point.name }}</h2>
+            <p>{{ point.info|raw }}</p>
+
+        {% endfor %}
+    </div>
+
+    <div id="faq" class="separator center-text">
+        F.A.Q.
+    </div>
+
+    <div class="content-wrapper">
+        <h2 class="spoiler">А почему, а где, а как мне сделать?</h2>
+        <p class="hidden">Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text eve r since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+
+        <h2 class="spoiler">А почему, а где, а как мне сделать?</h2>
+        <p class="hidden">Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text eve r since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+
+        <h2 class="spoiler">А почему, а где, а как мне сделать?</h2>
+        <p class="hidden">Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text eve r since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+
+    </div>
+
+{% endblock %}
+
+{% block css %}
+<style>
+    .content-wrapper h2.spoiler {
+        cursor: pointer;
+        text-decoration: underline;
+        margin-top: 15px;
+    }
+
+    .item {
+
+    }
+
+    .sale {
+        background-image: url(/img/sale.png);
+        background-size: contain;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        z-index: 1;
+        top: 0px;
+        left: 0px;
+    }
+
+    .bestseller {
+        background-image: url(/img/bestseller.png);
+        background-size: contain;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        z-index: 1;
+        top: -6px;
+        right: -5px;
+    }
+</style>
+{% endblock %}

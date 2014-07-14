@@ -1,0 +1,30 @@
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ path('dashboard') }}">Панель</a>
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="{{ path('blogcategory') }}">Категории</a></li>
+            <li><a href="{{ path('blogentry') }}">Посты</a></li>
+
+            <li><a href="{{ path('shopentry') }}">Магазин</a></li>
+            <li><a href="{{ path('application') }}">Заявки</a></li>
+            <li><a href="{{ path('deliverypoint') }}">Пункты выдачи</a></li>
+            <li><a href="{{ path('applicationreplysubject') }}">Темы ответов</a></li>
+
+            <li><a href="{{ path('promocode') }}">Промо Коды</a></li>
+            <li><a href="{{ path('customer') }}">Клиенты</a></li>
+
+            <li><a href="{{ path('supervisor') }}">Супервайзеры</a></li>
+            <li><a href="{{ path('operator') }}">Операторы</a></li>
+
+            <li><a href="{{ path('settings') }}">Настройки</a></li>
+        </ul>
+    </div>
+</div>

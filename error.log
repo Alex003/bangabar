@@ -1,0 +1,239 @@
+[Tue Feb 25 20:18:03 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/app/
+[Tue Feb 25 20:18:03 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/src/
+[Tue Feb 25 20:18:04 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/favicon.ico
+[Tue Feb 25 20:18:07 2014] [error] [client 127.0.0.1] PHP Warning:  require_once(/Users/september/Sites/ungabunga/web/../app/bootstrap.php.cache): failed to open stream: No such file or directory in /Users/september/Sites/ungabunga/web/app.php on line 6, referer: http://ungabunga.dev/
+[Tue Feb 25 20:18:07 2014] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required '/Users/september/Sites/ungabunga/web/../app/bootstrap.php.cache' (include_path='/usr/lib/php/pear') in /Users/september/Sites/ungabunga/web/app.php on line 6, referer: http://ungabunga.dev/
+[Tue Feb 25 21:17:04 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/app/
+[Tue Feb 25 21:17:04 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/src/
+[Tue Feb 25 21:17:06 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/app/
+[Tue Feb 25 21:17:06 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/src/
+[Tue Feb 25 21:17:08 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/app/
+[Tue Feb 25 21:17:08 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/src/
+[Tue Feb 25 21:17:10 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/app/
+[Tue Feb 25 21:17:10 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/src/
+[Tue Feb 25 21:17:12 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Tue Feb 25 21:17:12 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/
+[Tue Feb 25 21:17:18 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:17:18 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:17:32 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:17:32 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:18:04 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:18:04 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:18:21 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:18:21 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:18:35 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:18:35 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:18:45 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:18:45 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:20:46 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Tue Feb 25 21:20:46 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/
+[Tue Feb 25 21:20:48 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/customer/register
+[Tue Feb 25 21:20:48 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/customer/register
+[Tue Feb 25 21:21:16 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/customer/register
+[Tue Feb 25 21:21:16 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/customer/register
+[Tue Feb 25 21:21:28 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/customer/register
+[Tue Feb 25 21:21:28 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/customer/register
+[Tue Feb 25 21:22:12 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:22:12 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:22:31 2014] [error] [client 127.0.0.1] PHP Warning:  require(/Users/september/Sites/ungabunga/app/cache/prod/doctrine/orm/Proxies/__CG__AlexanderCBundleUngaBungaBundleEntityPromoCode.php): failed to open stream: No such file or directory in /Users/september/Sites/ungabunga/vendor/doctrine/common/lib/Doctrine/Common/Proxy/AbstractProxyFactory.php on line 200, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:22:31 2014] [error] [client 127.0.0.1] PHP Fatal error:  require(): Failed opening required '/Users/september/Sites/ungabunga/app/cache/prod/doctrine/orm/Proxies/__CG__AlexanderCBundleUngaBungaBundleEntityPromoCode.php' (include_path='/usr/lib/php/pear') in /Users/september/Sites/ungabunga/vendor/doctrine/common/lib/Doctrine/Common/Proxy/AbstractProxyFactory.php on line 200, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:22:34 2014] [error] [client 127.0.0.1] PHP Warning:  require(/Users/september/Sites/ungabunga/app/cache/prod/doctrine/orm/Proxies/__CG__AlexanderCBundleUngaBungaBundleEntityPromoCode.php): failed to open stream: No such file or directory in /Users/september/Sites/ungabunga/vendor/doctrine/common/lib/Doctrine/Common/Proxy/AbstractProxyFactory.php on line 200, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:22:34 2014] [error] [client 127.0.0.1] PHP Fatal error:  require(): Failed opening required '/Users/september/Sites/ungabunga/app/cache/prod/doctrine/orm/Proxies/__CG__AlexanderCBundleUngaBungaBundleEntityPromoCode.php' (include_path='/usr/lib/php/pear') in /Users/september/Sites/ungabunga/vendor/doctrine/common/lib/Doctrine/Common/Proxy/AbstractProxyFactory.php on line 200, referer: http://ungabunga.dev/web/customer/login
+[Tue Feb 25 21:22:38 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Tue Feb 25 21:22:38 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/
+[Tue Feb 25 21:24:36 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Tue Feb 25 21:24:36 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/
+[Tue Feb 25 21:24:45 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 21:24:45 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 21:24:47 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/blogcategory/
+[Tue Feb 25 21:24:47 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/blogcategory/
+[Tue Feb 25 21:24:49 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/blogcategory/new
+[Tue Feb 25 21:24:49 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/blogcategory/new
+[Tue Feb 25 21:24:53 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/blogentry/
+[Tue Feb 25 21:24:53 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/blogentry/
+[Tue Feb 25 21:24:54 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/blogentry/new
+[Tue Feb 25 21:24:54 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/blogentry/new
+[Tue Feb 25 21:24:58 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/shopentry/
+[Tue Feb 25 21:24:58 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/shopentry/
+[Tue Feb 25 21:24:59 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/shopentry/new
+[Tue Feb 25 21:24:59 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/shopentry/new
+[Tue Feb 25 21:25:02 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/application/
+[Tue Feb 25 21:25:02 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/application/
+[Tue Feb 25 21:47:17 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 21:47:17 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 21:47:19 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/deliverypoint/
+[Tue Feb 25 21:47:19 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/deliverypoint/
+[Tue Feb 25 21:51:15 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/operator/
+[Tue Feb 25 21:51:15 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/operator/
+[Tue Feb 25 21:56:03 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 21:56:03 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 21:56:03 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Tue Feb 25 21:56:03 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/
+[Tue Feb 25 21:56:05 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 21:56:05 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 21:56:48 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/
+[Tue Feb 25 21:56:48 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/
+[Tue Feb 25 21:58:55 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/
+[Tue Feb 25 21:58:55 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/
+[Tue Feb 25 21:59:11 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/
+[Tue Feb 25 21:59:11 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/
+[Tue Feb 25 21:59:20 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/
+[Tue Feb 25 21:59:20 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/
+[Tue Feb 25 21:59:49 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/
+[Tue Feb 25 21:59:49 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/
+[Tue Feb 25 21:59:55 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/favicon.ico
+[Tue Feb 25 22:01:27 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/
+[Tue Feb 25 22:01:27 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/
+[Tue Feb 25 22:01:44 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:01:44 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:02:39 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/promocode/
+[Tue Feb 25 22:02:39 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/promocode/
+[Tue Feb 25 22:02:43 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:02:43 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:03:58 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:03:58 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:04:00 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:04:00 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:04:01 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:04:01 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:07:13 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/
+[Tue Feb 25 22:07:13 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/
+[Tue Feb 25 22:07:20 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/new
+[Tue Feb 25 22:07:20 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/new
+[Tue Feb 25 22:07:27 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/
+[Tue Feb 25 22:07:27 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/applicationreplysubject/
+[Tue Feb 25 22:07:47 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:07:47 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:07:48 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:07:48 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:08:51 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:08:51 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:08:53 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:08:53 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:09:05 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:09:05 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:09:06 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:09:06 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:09:08 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:09:08 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:09:11 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:09:11 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:09:11 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:09:11 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:09:13 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:09:13 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:09:14 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/customer/
+[Tue Feb 25 22:09:14 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/customer/
+[Tue Feb 25 22:09:24 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/customer/1/show
+[Tue Feb 25 22:09:24 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/customer/1/show
+[Tue Feb 25 22:09:30 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/customer/
+[Tue Feb 25 22:09:30 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/customer/
+[Tue Feb 25 22:09:33 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/customer/1/show
+[Tue Feb 25 22:09:33 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/customer/1/show
+[Tue Feb 25 22:09:35 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/customer/
+[Tue Feb 25 22:09:35 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/customer/
+[Tue Feb 25 22:09:40 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:09:40 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:13:32 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:13:32 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:14:39 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:14:39 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:19:20 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:19:20 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:19:29 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/supervisor/
+[Tue Feb 25 22:19:29 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/supervisor/
+[Tue Feb 25 22:19:32 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/supervisor/new
+[Tue Feb 25 22:19:32 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/supervisor/new
+[Tue Feb 25 22:19:34 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/supervisor/
+[Tue Feb 25 22:19:34 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/supervisor/
+[Tue Feb 25 22:19:35 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:19:35 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:19:40 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/operator/
+[Tue Feb 25 22:19:40 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/operator/
+[Tue Feb 25 22:19:42 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:19:42 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:28:24 2014] [error] [client 127.0.0.1] script '/Users/september/Sites/ungabunga/app_dev.php' not found or unable to stat
+[Tue Feb 25 22:28:31 2014] [error] [client 127.0.0.1] script '/Users/september/Sites/ungabunga/app.php' not found or unable to stat
+[Tue Feb 25 22:28:37 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/app/
+[Tue Feb 25 22:28:37 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/src/
+[Tue Feb 25 22:28:40 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Tue Feb 25 22:28:40 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/
+[Tue Feb 25 22:28:44 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Tue Feb 25 22:28:44 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/
+[Tue Feb 25 22:28:49 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:28:49 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:28:50 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Tue Feb 25 22:28:50 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/
+[Tue Feb 25 22:28:54 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Tue Feb 25 22:32:00 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Tue Feb 25 22:32:00 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/
+[Tue Feb 25 22:32:02 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:32:02 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:33:41 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:33:41 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:41:30 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css
+[Tue Feb 25 22:41:35 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:41:35 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:42:50 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/web/robots.txt/
+[Tue Feb 25 22:42:55 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Tue Feb 25 22:42:55 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/
+[Tue Feb 25 22:43:07 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/app/
+[Tue Feb 25 22:43:07 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/src/
+[Tue Feb 25 22:43:11 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Tue Feb 25 22:43:11 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/
+[Tue Feb 25 22:43:15 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:43:15 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:47:30 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:47:30 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:47:32 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:47:32 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:47:53 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:47:53 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:48:50 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:48:50 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:48:51 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:48:51 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:50:13 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:50:13 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:50:15 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:50:15 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:50:16 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:50:16 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:50:17 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:50:17 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:52:51 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css
+[Tue Feb 25 22:53:02 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css
+[Tue Feb 25 22:53:09 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css
+[Tue Feb 25 22:59:04 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css
+[Tue Feb 25 22:59:05 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css
+[Tue Feb 25 22:59:08 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/app/
+[Tue Feb 25 22:59:08 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/src/
+[Tue Feb 25 22:59:13 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/app/
+[Tue Feb 25 22:59:13 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/src/
+[Tue Feb 25 22:59:17 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/app/
+[Tue Feb 25 22:59:17 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/src/
+[Tue Feb 25 22:59:19 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Tue Feb 25 22:59:19 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/
+[Tue Feb 25 22:59:21 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:59:21 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:59:38 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/dashboard/
+[Tue Feb 25 22:59:38 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/dashboard/
+[Wed Feb 26 10:32:48 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/app/
+[Wed Feb 26 10:32:48 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/src/
+[Wed Feb 26 10:32:49 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/favicon.ico
+[Wed Feb 26 10:32:52 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/
+[Wed Feb 26 10:32:52 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Wed Feb 26 10:35:33 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Wed Feb 26 10:39:10 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Wed Feb 26 10:39:10 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/
+[Wed Feb 26 21:48:56 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/app/
+[Wed Feb 26 21:48:56 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/src/
+[Wed Feb 26 21:48:56 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/favicon.ico
+[Wed Feb 26 21:48:59 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Wed Feb 26 21:48:59 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/
+[Wed Feb 26 21:51:52 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/js, referer: http://ungabunga.dev/web/
+[Wed Feb 26 21:51:52 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Wed Feb 26 21:51:56 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/css, referer: http://ungabunga.dev/web/
+[Thu Feb 27 23:17:15 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/app/
+[Thu Feb 27 23:17:15 2014] [error] [client 127.0.0.1] client denied by server configuration: /Users/september/Sites/ungabunga/src/
+[Thu Feb 27 23:17:16 2014] [error] [client 127.0.0.1] File does not exist: /Users/september/Sites/ungabunga/favicon.ico

@@ -1,0 +1,30 @@
+blogcategory:
+    pattern:  /
+    defaults: { _controller: "UngaBungaBundle:BlogCategory:index" }
+
+blogcategory_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "UngaBungaBundle:BlogCategory:show" }
+
+blogcategory_new:
+    pattern:  /new
+    defaults: { _controller: "UngaBungaBundle:BlogCategory:new" }
+
+blogcategory_create:
+    pattern:  /create
+    defaults: { _controller: "UngaBungaBundle:BlogCategory:create" }
+    requirements: { _method: post }
+
+blogcategory_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "UngaBungaBundle:BlogCategory:edit" }
+
+blogcategory_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "UngaBungaBundle:BlogCategory:update" }
+    requirements: { _method: post|put }
+
+blogcategory_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "UngaBungaBundle:BlogCategory:delete" }
+    requirements: { _method: post|delete }

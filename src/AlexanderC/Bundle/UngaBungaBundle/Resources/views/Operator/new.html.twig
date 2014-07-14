@@ -1,0 +1,18 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="record_actions breadcrumb">
+        <li>
+            <a href="{{ path('operator') }}">
+                Операторы
+            </a>
+        </li>
+        <li class="active">Добавить оператора</li>
+    </ul>
+
+    <div class="col-md-4 column">
+        {{ form(form) }}
+    </div>
+
+
+{% endblock %}

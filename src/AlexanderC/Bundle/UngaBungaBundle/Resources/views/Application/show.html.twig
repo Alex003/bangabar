@@ -1,0 +1,58 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{{ path('application') }}">
+                Заявки
+            </a>
+        </li>
+        <li class="active">Просмотр заявки</li>
+    </ul>
+
+    <table class="record_properties table table-hover">
+        <tbody>
+            <tr>
+                <th>ID</th>
+                <td>{{ entity.uniqueidx }}</td>
+            </tr>
+            <tr>
+                <th>Эл. Почта</th>
+                <td><a href="{{ path('customer_show', { 'id': entity.customer.id }) }}">{{ entity.email }}</a></td>
+            </tr>
+            <tr>
+                <th>Оператор</th>
+                <td><a href="{{ path('operator_show', { 'id': entity.operator.id }) }}">{{ entity.operator.nick }}</a></td>
+            </tr>
+            {% if entity.reply %}
+                <tr>
+                    <th>Статус</th>
+                    <td class="success">Завершено</td>
+                </tr>
+                <tr>
+                    <th>Тема Ответа</th>
+                    <td>
+                        <a href="{{ path('applicationreplysubject_show', { 'id': entity.reply.subject.id }) }}">
+                            {{ entity.reply.subject.subject[:20] }}{% if entity.reply.subject.subject|length > 20 %}...{% endif %}
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Дата Ответа</th>
+                    <td>{{ entity.reply.created|date("Y-m-d H:i:s") }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <th>Статус</th>
+                    <td class="active">Обрабатывается</td>
+                </tr>
+            {% endif %}
+            <tr>
+                <th>Дата Создания</th>
+                <td>{{ entity.created|date('d.m.Y H:i:s') }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+{% endblock %}

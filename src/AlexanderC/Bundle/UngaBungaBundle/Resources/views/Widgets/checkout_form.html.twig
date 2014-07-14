@@ -1,0 +1,55 @@
+<div class="popup hidden checkout_form">
+    <header class="popup-head cf">
+        <span class="title left">Информация для оплаты</span>
+        <a class="close-popup right" href="#">закрыть</a>
+    </header>
+
+    <div class="order-form">
+        <div class="row cf">
+            <div class="left">
+                Номер заказа:
+            </div>
+            <div class="right order-number">
+                №<span class="value"></span>
+            </div>
+        </div>
+
+        <div class="row cf">
+            <div class="left">
+                Кошелек для оплаты:
+            </div>
+            <div class="right wallet" style="text-transform: none;">
+
+            </div>
+        </div>
+
+        <div class="row positions cf">
+            <label>Выбранные позиции:</label>
+
+
+        </div>
+
+        <div class="total-price row cf">
+            <div class="left">
+                Общая стоимость
+            </div>
+            <div class="right total-price">
+                <span class="value">0</span> руб.
+            </div>
+        </div>
+
+        <div class="row cf">
+            <div class="left">
+                Пункт выдачи:
+            </div>
+            <div class="right delivery-point">
+
+            </div>
+        </div>
+
+        <div class="notice row cf">
+            <label>ОБРАТИТЕ ВНИМАНИЕ:</label>
+            <p class="delivery-point-info">{{ settings.applicantInfo|raw }}</p>
+        </div>
+    </div>
+</div>

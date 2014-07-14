@@ -1,0 +1,58 @@
+AlexanderC\Bundle\UngaBungaBundle\Entity\BlogEntry:
+    type:  entity
+    repositoryClass: AlexanderC\Bundle\UngaBungaBundle\Repository\BlogEntryRepository
+    table: blog_entry
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+          type: string
+          length: 255
+          nullable: false
+        image_url:
+          type: string
+          length: 255
+          nullable: false
+        text:
+          type: text
+          nullable: false
+        on_homepage:
+          type: boolean
+          nullable: false
+          default: false
+        slug:
+          type: string
+          length: 255
+          gedmo:
+            slug:
+              separator: -
+              #style: camel
+              updateable: false
+              unique: true
+              fields:
+                - title
+        created:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: create
+        updated:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: update
+    indexes:
+        blog_entry_slug_idx:
+          columns: [slug]
+    manyToOne:
+        category:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\BlogCategory
+            inversedBy: entries
+            joinColumn:
+                name: blog_category_id
+                referencedColumnName: id
+            cascade: ["persist"]
+

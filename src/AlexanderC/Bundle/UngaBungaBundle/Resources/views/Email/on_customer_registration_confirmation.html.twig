@@ -1,0 +1,6 @@
+<p>
+    Для завершения регистрации пройдите по ссылке ниже. Если это письмо выслано по ошибке, проигнорируйте его.
+</p>
+<p>
+    <a href="{{ url('customer_register_confirmation', {'email': customer.email, 'token': customer.token}) }}">Подтверждение регистрации</a>
+</p>

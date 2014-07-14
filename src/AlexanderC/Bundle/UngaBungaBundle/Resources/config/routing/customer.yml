@@ -1,0 +1,10 @@
+customer:
+    pattern:  /
+    defaults: { _controller: "UngaBungaBundle:Customer:index" }
+
+customer_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "UngaBungaBundle:Customer:show" }
+
+
+

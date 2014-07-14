@@ -1,0 +1,51 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="breadcrumb">
+        <li class="active">Посты</li>
+        <li>
+            <a href="{{ path('blogentry_new') }}">
+                Добавить Пост
+            </a>
+        </li>
+    </ul>
+    <table class="records_list table table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Заголовок</th>
+                <th>Показывать на главной</th>
+                <th>Обновлено</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><div class="preview-thumb" style="background-image: url({{ entity.imageurl }})"></div></td>
+                <td>{{ entity.title }}</td>
+                <td>
+                    {% if entity.onHomepage %}
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    {% else %}
+                        <span class="glyphicon glyphicon-eye-close"></span>
+                    {% endif %}
+                </td>
+                <td>{% if entity.updated %}{{ entity.updated|date('d.m.Y H:i:s') }}{% endif %}</td>
+                <td>
+                <ul class="list-inline">
+                    <li>
+                        <a href="{{ path('blogentry_show', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-pencil"></span></a>
+                    </li>
+                    <li>
+                        <a href="{{ path('blogentry_edit', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-pencil"></span></a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    {% endblock %}

@@ -1,0 +1,8 @@
+AlexanderC\Bundle\UngaBungaBundle\Entity\SystemUser:
+    type:  entity
+    table: system_user
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO

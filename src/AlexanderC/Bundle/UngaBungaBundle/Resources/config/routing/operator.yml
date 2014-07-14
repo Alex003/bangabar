@@ -1,0 +1,30 @@
+operator:
+    pattern:  /
+    defaults: { _controller: "UngaBungaBundle:Operator:index" }
+
+operator_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "UngaBungaBundle:Operator:show" }
+
+operator_new:
+    pattern:  /new
+    defaults: { _controller: "UngaBungaBundle:Operator:new" }
+
+operator_create:
+    pattern:  /create
+    defaults: { _controller: "UngaBungaBundle:Operator:create" }
+    requirements: { _method: post }
+
+operator_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "UngaBungaBundle:Operator:edit" }
+
+operator_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "UngaBungaBundle:Operator:update" }
+    requirements: { _method: post|put }
+
+operator_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "UngaBungaBundle:Operator:delete" }
+    requirements: { _method: post|delete }

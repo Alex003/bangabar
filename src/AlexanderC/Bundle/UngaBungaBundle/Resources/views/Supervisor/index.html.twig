@@ -1,0 +1,44 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="breadcrumb">
+        <li class="active">Супервайзеры</li>
+        <li>
+            <a href="{{ path('supervisor_new') }}">
+                Добавить супервайзера
+            </a>
+        </li>
+    </ul>
+
+    <table class="records_list table table-hover">
+        <thead>
+            <tr>
+                <th>Эл. почта</th>
+                <th>Логин</th>
+                <th>Обновлено</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.email }}</td>
+                <td>{{ entity.nick }}</td>
+                <td>{% if entity.updated %}{{ entity.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul class="list-inline">
+                    <li>
+                        <a href="{{ path('supervisor_show', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-link"></span></a>
+                    </li>
+                    <li>
+                        <a href="{{ path('supervisor_edit', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-pencil"></span></a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    {% endblock %}

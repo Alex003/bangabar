@@ -1,0 +1,47 @@
+AlexanderC\Bundle\UngaBungaBundle\Entity\DeliveryPoint:
+    type:  entity
+    repositoryClass: AlexanderC\Bundle\UngaBungaBundle\Repository\DeliveryPointRepository
+    table: delivery_point
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+          type: string
+          length: 255
+          nullable: false
+        info:
+          type: text
+          nullable: true
+        slug:
+          type: string
+          length: 255
+          gedmo:
+            slug:
+              separator: -
+              #style: camel
+              updateable: false
+              unique: true
+              fields:
+                - name
+        created:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: create
+        updated:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: update
+    indexes:
+        delivery_point_email_idx:
+          columns: [slug]
+    oneToMany:
+          applications:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\Application
+            mappedBy: delivery_point
+            cascade: ["all"]
+

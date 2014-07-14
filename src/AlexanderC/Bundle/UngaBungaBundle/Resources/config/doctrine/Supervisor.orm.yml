@@ -1,0 +1,41 @@
+AlexanderC\Bundle\UngaBungaBundle\Entity\Supervisor:
+    type:  entity
+    repositoryClass: AlexanderC\Bundle\UngaBungaBundle\Repository\SupervisorRepository
+    table: supervisor
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        email:
+          type: string
+          length: 255
+          nullable: false
+          unique: true
+        nick:
+          type: string
+          length: 255
+          nullable: false
+          unique: true
+        created:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: create
+        updated:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: update
+    indexes:
+        supervisor_email_idx:
+          columns: [email]
+        supervisor_nick_idx:
+          columns: [nick]
+    oneToMany:
+          operators:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\Operator
+            mappedBy: supervisor
+            cascade: ["all"]
+

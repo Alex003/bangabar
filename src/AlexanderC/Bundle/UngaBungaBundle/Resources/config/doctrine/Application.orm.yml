@@ -1,0 +1,62 @@
+AlexanderC\Bundle\UngaBungaBundle\Entity\Application:
+    type:  entity
+    repositoryClass: AlexanderC\Bundle\UngaBungaBundle\Repository\ApplicationRepository
+    table: application
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        email:
+          type: string
+          length: 255
+          nullable: false
+        unique_idx:
+          type: string
+          length: 128
+          nullable: false
+          unique: true
+        created:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: create
+    indexes:
+        application_email_idx:
+          columns: [email]
+        application_unique_idx_idx:
+          columns: [unique_idx]
+    manyToOne:
+        customer:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\Customer
+            inversedBy: applications
+            joinColumn:
+                name: customer_id
+                referencedColumnName: id
+            cascade: ["persist"]
+        operator:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\Operator
+            inversedBy: applications
+            joinColumn:
+                name: operator_id
+                referencedColumnName: id
+            cascade: ["persist"]
+        delivery_point:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\DeliveryPoint
+            inversedBy: applications
+            joinColumn:
+                name: delivery_point_id
+                referencedColumnName: id
+            cascade: ["persist"]
+    oneToOne:
+          reply:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\ApplicationReply
+            inversedBy: application
+            cascade: ["all"]
+    oneToMany:
+          data:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\ApplicationData
+            mappedBy: application
+            cascade: ["all"]
+

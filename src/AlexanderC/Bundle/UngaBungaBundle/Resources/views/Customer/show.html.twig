@@ -1,0 +1,47 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="record_actions breadcrumb">
+        <li>
+            <a href="{{ path('customer') }}">
+                Клиенты
+            </a>
+        </li>
+        <li class="active">Просмотр клиента</li>
+    </ul>
+
+    <table class="record_properties table table-hover">
+        <tbody>
+            <tr>
+                <th>Эл. почта</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th>Пароль</th>
+                <td>{{ entity.password }}</td>
+            </tr>
+            <tr>
+                <th>Промо Код</th>
+                <td><a href="{{ path('promocode_show', { 'id': entity.promoCode.id }) }}">{{ entity.promoCode.code }}</a></td>
+            </tr>
+            <tr>
+                <th>Кол-во заявок</th>
+                <td>{{ activeApplicationsCount + closedApplicationsCount }}</td>
+            </tr>
+            <tr>
+                <th>Закрыто Заявок</th>
+                <td>{{ closedApplicationsCount }}</td>
+            </tr>
+            <tr>
+                <th>Дата регистрации</th>
+                <td>{{ entity.created|date('d.m.Y H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Обновлено</th>
+                <td>{{ entity.updated|date('d.m.Y H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+{% endblock %}

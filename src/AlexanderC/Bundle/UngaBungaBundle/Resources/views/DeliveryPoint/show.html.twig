@@ -1,0 +1,43 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="record_actions breadcrumb">
+        <li>
+            <a href="{{ path('deliverypoint') }}">
+                Пункты выдачи
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('deliverypoint_new') }}">
+                Добавить пункт выдачи
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('deliverypoint_edit', { 'id': entity.id }) }}">
+                Редактировать текущий пункт выдачи
+            </a>
+        </li>
+        <li class="active">Просмотр пункта выдачи</li>
+    </ul>
+
+    <table class="record_properties table table-hover">
+        <tbody>
+            <tr>
+                <th>Название</th>
+                <td>{{ entity.name }}</td>
+            </tr>
+            <tr>
+                <th>Информация</th>
+                <td>{{ entity.info }}</td>
+            </tr>
+            <tr>
+                <th>Обновлено</th>
+                <td>{{ entity.updated|date('Y-m-d H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul class="record_actions list-inline">
+        <li>{{ form(delete_form) }}</li>
+    </ul>
+{% endblock %}

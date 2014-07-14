@@ -1,0 +1,25 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="record_actions breadcrumb">
+        <li>
+            <a href="{{ path('deliverypoint') }}">
+                Пункты выдачи
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('deliverypoint_new') }}">
+                Добавить пункт выдачи
+            </a>
+        </li>
+        <li>Редактирование пункта выдачи</li>
+    </ul>
+
+    <div class="col-md-7 column">
+        {{ form(edit_form) }}
+        <br/>
+        <ul class="record_actions list-inline">
+            <li>{{ form(delete_form) }}</li>
+        </ul>
+    </div>
+{% endblock %}

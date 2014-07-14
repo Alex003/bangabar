@@ -1,0 +1,47 @@
+UngaBungaBundle_general:
+        resource: "@UngaBungaBundle/Resources/config/routing/general.yml"
+        prefix:   /
+
+UngaBungaBundle_dashboard:
+        resource: "@UngaBungaBundle/Resources/config/routing/dashboard.yml"
+        prefix:   /dashboard/
+
+UngaBungaBundle_promocode:
+        resource: "@UngaBungaBundle/Resources/config/routing/promocode.yml"
+        prefix:   /dashboard/promocode
+
+UngaBungaBundle_customer:
+        resource: "@UngaBungaBundle/Resources/config/routing/customer.yml"
+        prefix:   /dashboard/customer
+
+UngaBungaBundle_blogcategory:
+        resource: "@UngaBungaBundle/Resources/config/routing/blogcategory.yml"
+        prefix:   /dashboard/blogcategory
+
+UngaBungaBundle_blogentry:
+        resource: "@UngaBungaBundle/Resources/config/routing/blogentry.yml"
+        prefix:   /dashboard/blogentry
+
+UngaBungaBundle_shopentry:
+        resource: "@UngaBungaBundle/Resources/config/routing/shopentry.yml"
+        prefix:   /dashboard/shopentry
+
+UngaBungaBundle_supervisor:
+        resource: "@UngaBungaBundle/Resources/config/routing/supervisor.yml"
+        prefix:   /dashboard/supervisor
+
+UngaBungaBundle_operator:
+        resource: "@UngaBungaBundle/Resources/config/routing/operator.yml"
+        prefix:   /dashboard/operator
+
+UngaBungaBundle_deliverypoint:
+        resource: "@UngaBungaBundle/Resources/config/routing/deliverypoint.yml"
+        prefix:   /dashboard/deliverypoint
+
+UngaBungaBundle_applicationreplysubject:
+        resource: "@UngaBungaBundle/Resources/config/routing/applicationreplysubject.yml"
+        prefix:   /dashboard/applicationreplysubject
+
+UngaBungaBundle_application:
+        resource: "@UngaBungaBundle/Resources/config/routing/application.yml"
+        prefix:   /dashboard/application

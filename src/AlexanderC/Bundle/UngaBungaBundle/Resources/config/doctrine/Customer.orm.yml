@@ -1,0 +1,58 @@
+AlexanderC\Bundle\UngaBungaBundle\Entity\Customer:
+    type:  entity
+    repositoryClass: AlexanderC\Bundle\UngaBungaBundle\Repository\CustomerRepository
+    table: customer
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        email:
+          type: string
+          length: 255
+          nullable: false
+          unique: true
+        password:
+          type: string
+          length: 255
+          nullable: false
+        confirmed:
+          type: boolean
+          nullable: false
+          default: false
+        token:
+          type: string
+          length: 255
+          nullable: true
+        created:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: create
+        updated:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: update
+    indexes:
+        customer_email_idx:
+          columns: [email]
+        customer_token_confirmed_idx:
+          columns: [token, confirmed]
+        customer_email_password_confirmed_idx:
+          columns: [email, password, confirmed]
+    manyToOne:
+        promo_code:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\PromoCode
+            inversedBy: customers
+            joinColumn:
+                name: promo_code_id
+                referencedColumnName: id
+            cascade: ["persist"]
+    oneToMany:
+          applications:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\Application
+            mappedBy: customer
+            cascade: ["all"]
+

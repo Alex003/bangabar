@@ -1,0 +1,32 @@
+AlexanderC\Bundle\UngaBungaBundle\Entity\ApplicationReply:
+    type:  entity
+    repositoryClass: AlexanderC\Bundle\UngaBungaBundle\Repository\ApplicationReplyRepository
+    table: application_reply
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        text:
+          type: text
+          nullable: false
+        created:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: create
+    manyToOne:
+        subject:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\ApplicationReplySubject
+            inversedBy: replies
+            joinColumn:
+                name: subject_id
+                referencedColumnName: id
+            cascade: ["persist"]
+    oneToOne:
+          application:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\Application
+            inversedBy: reply
+            cascade: ["all"]
+

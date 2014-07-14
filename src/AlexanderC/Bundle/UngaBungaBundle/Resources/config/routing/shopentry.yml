@@ -1,0 +1,30 @@
+shopentry:
+    pattern:  /
+    defaults: { _controller: "UngaBungaBundle:ShopEntry:index" }
+
+shopentry_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "UngaBungaBundle:ShopEntry:show" }
+
+shopentry_new:
+    pattern:  /new
+    defaults: { _controller: "UngaBungaBundle:ShopEntry:new" }
+
+shopentry_create:
+    pattern:  /create
+    defaults: { _controller: "UngaBungaBundle:ShopEntry:create" }
+    requirements: { _method: post }
+
+shopentry_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "UngaBungaBundle:ShopEntry:edit" }
+
+shopentry_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "UngaBungaBundle:ShopEntry:update" }
+    requirements: { _method: post|put }
+
+shopentry_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "UngaBungaBundle:ShopEntry:delete" }
+    requirements: { _method: post|delete }

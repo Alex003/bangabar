@@ -1,0 +1,159 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    {% set customerInfo = app.session.get('customer') %}
+
+    <section class="application-form">
+        <div class="wrap">
+            <div class="separator center-text">
+                Оформить заявку
+            </div>
+
+            <div class="form" method="POST">
+                <form action="">
+                    <div class="item-list cf">
+                        <label class="select-items left" for="item">Выберите продукт</label>
+                        <div class="items right cf">
+                            <div class="item cf">
+                                <div class="item-name left">
+                                    <select class="ik" name="product[]" id="item">
+                                        {% for entry in shopEntries %}
+                                            <option value="{{ entry.id }}" data-price="{{ entry.price }}">{{ entry.title }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+
+                                <div class="item-quantity integer left">
+                                    <input class="quantity" type="text" name="quantity[]" value="1" disabled="disabled"/> <span>штук</span>
+                                    <!--<span>штук</span>-->
+                                    <a class="inc" href="#">+</a>
+                                    <a class="dec" href="#">-</a>
+                                </div>
+
+                                <div class="price right">
+                                    <span class="value">2500</span> руб.
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="cf"></div>
+                        <div class="new-position cf">
+                            <a class="action-add-new-item" href="#">Добавить позицию</a>
+                        </div>
+
+                    </div>
+
+                    <div class="total">
+                        Итого к оплате: <span class="total-price"> <span class="value">5600</span> руб.</span>
+                    </div>
+
+                    <div class="delivery cf">
+                        <div class="delivery-point left cf">
+                            <label for="delivery-point" class="left">Выберите пункт выдачи:</label>
+                            <select class="ik left" name="deliver" id="delivery-point">
+                                {% for entry in deliveryPoints %}
+                                    <option value="{{ entry.id }}">{{ entry.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="email right">
+                            <label for="email" class="left">Ваш E-MAIL:</label>
+                            <input id="email" name="email" type="email" value="{{ customerInfo.email }}"/>
+                        </div>
+                    </div>
+
+                    <div class="submit center-text">
+                        <input type="submit" value="Отправить заявку"/>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="separator center-text">
+        Пункты выдачи
+    </div>
+
+    <div class="content-wrapper">
+        {% for point in deliveryPoints %}
+            <h2>{{ point.name }}</h2>
+            <p>{{ point.info }}</p>
+
+        {% endfor %}
+    </div>
+
+
+    <div class="separator center-text">
+        F.A.Q.
+    </div>
+
+    <div class="content-wrapper">
+        <h2>А почему, а где, а как мне сделать?</h2>
+        <p>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text eve r since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+
+        <h2>А почему, а где, а как мне сделать?</h2>
+        <p>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text eve r since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+
+        <h2>А почему, а где, а как мне сделать?</h2>
+        <p>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text eve r since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+
+    </div>
+
+
+{% endblock %}
+
+{% block js %}
+<script>
+    $().ready(function() {
+        bindProductRowsUpdate();
+
+        $("#product-add").click(function() {
+            var section = $(this).parents("div.product-section");
+            var newSection = section.clone();
+            newSection.find("#product-add").remove();
+
+            newSection.insertAfter($("div.product-section:last"));
+
+            bindProductRowsUpdate();
+        });
+
+        $("button[type='submit']").click(function(e) {
+            if(parseInt($("#products-total-price").text()) <= 0) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                return false;
+            }
+        });
+    });
+
+    function bindProductRowsUpdate()
+    {
+        $("select[name='product[]'], input[name='quantity[]']").unbind("change");
+        $("select[name='product[]'], input[name='quantity[]']").change(function() {
+            updateProductRows();
+        });
+    }
+
+    function updateProductRows()
+    {
+        var totalPrice = 0;
+
+        $("select[name='product[]']").each(function() {
+            var product = $(this);
+            var unitPrice = parseInt(product.find(":selected").data('price'));
+            var quantity = product.parent("div.form-group").siblings("div.form-group").find("input[name='quantity[]']");
+            var price = product.parent("div.form-group").siblings("div.form-group").find("input[name='price']");
+
+            var calcPrice = parseInt(quantity.val()) * unitPrice;
+
+            price.val(calcPrice);
+            totalPrice += calcPrice;
+        });
+
+        $("#products-total-price").html(totalPrice);
+    }
+</script>
+{% endblock %}

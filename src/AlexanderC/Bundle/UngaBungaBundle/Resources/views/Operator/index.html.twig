@@ -1,0 +1,57 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="breadcrumb">
+        <li class="active">Операторы</li>
+        <li>
+            <a href="{{ path('operator_new') }}">
+                Добавить оператора
+            </a>
+        </li>
+    </ul>
+
+    <table class="records_list table table-hover">
+        <thead>
+            <tr>
+                <th>Эл. почта</th>
+                <th>Логин</th>
+                <th>Кошелек</th>
+                <th>Закрыто Заявок</th>
+                <th>Кол-во заявок</th>
+                <th>Активный</th>
+                <th>Обновлено</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.email }}</td>
+                <td>{{ entity.nick }}</td>
+                <td>{{ entity.wallet }}</td>
+                <td>{{ entity.closedAppsCount }}</td>
+                <td>{{ entity.appsCount }}</td>
+                <td>
+                    {% if entity.active %}
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    {% else %}
+                        <span class="glyphicon glyphicon-eye-close"></span>
+                    {% endif %}
+                </td>
+                <td>{% if entity.updated %}{{ entity.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                <ul class="list-inline">
+                    <li>
+                        <a href="{{ path('operator_show', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-link"></span></a>
+                    </li>
+                    <li>
+                        <a href="{{ path('operator_edit', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-pencil"></span></a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

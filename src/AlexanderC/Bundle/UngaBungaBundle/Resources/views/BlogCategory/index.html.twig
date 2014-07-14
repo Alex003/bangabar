@@ -1,0 +1,50 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="breadcrumb">
+        <li class="active">Категории</li>
+        <li>
+            <a href="{{ path('blogcategory_new') }}">
+                Добавить категорию
+            </a>
+        </li>
+    </ul>
+
+    <table class="records_list table table-hover">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Обновлено</th>
+                <th>Видимость</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.name }}</td>
+                <td>{% if entity.updated %}{{ entity.updated|date('d.m.Y H:i:s') }}{% endif %}</td>
+                <td>
+                    {% if entity.hidden %}
+                        <span class="glyphicon glyphicon-eye-close"></span>
+                    {% else %}
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    {% endif %}
+                </td>
+                <td>
+                <ul class="list-inline">
+                    <li>
+                        <a href="{{ path('blogcategory_show', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-link"></span></a>
+                    </li>
+                    <li>
+                        <a href="{{ path('blogcategory_edit', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-pencil"></span></a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

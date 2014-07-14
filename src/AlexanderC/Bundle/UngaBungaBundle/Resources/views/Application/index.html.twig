@@ -1,0 +1,53 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="breadcrumb">
+        <li class="active">Заявки</li>
+    </ul>
+
+    <table class="records_list table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Эл. Почта</th>
+                <th>Оператор</th>
+                <th>Статус</th>
+                <th>Тема Ответа</th>
+                <th>Дата Ответа</th>
+                <th>Дата Создания</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities|reverse %}
+            <tr>
+                <td>{{ entity.uniqueidx }}</td>
+                <td><a href="{{ path('customer_show', { 'id': entity.customer.id }) }}">{{ entity.email }}</a></td>
+                <td><a href="{{ path('operator_show', { 'id': entity.operator.id }) }}">{{ entity.operator.nick }}</a></td>
+                {% if entity.reply %}
+                    <td class="success">Завершено</td>
+                    <td>
+                        <a href="{{ path('applicationreplysubject_show', { 'id': entity.reply.subject.id }) }}">
+                            {{ entity.reply.subject.subject[:20] }}{% if entity.reply.subject.subject|length > 20 %}...{% endif %}
+                        </a>
+                    </td>
+                    <td>{{ entity.reply.created|date("Y-m-d H:i:s") }}</td>
+                {% else %}
+                    <td class="active">Обрабатывается</td>
+                    <td class="text-center"><span class="glyphicon glyphicon-minus"></span></td>
+                    <td class="text-center"><span class="glyphicon glyphicon-minus"></span></td>
+                {% endif %}
+                <td>{% if entity.created %}{{ entity.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                <ul class="list-inline">
+                    <li>
+                        <a href="{{ path('application_show', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-link"></span></a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock %}

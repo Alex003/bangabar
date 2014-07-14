@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Banga Bar</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="{{ asset('/css/general.css') }}" rel="stylesheet" media="screen">
+
+    {% block stylesheets %}{% endblock %}
+    {% block css %}{% endblock %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+    <!-- HTML5 Shim and Respond.js add IE8 support of HTML5 elements and media queries -->
+    {% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
+    <script>
+        ajax_url = {
+            checkout: "{{path('application_checkout')}}",
+            login: "{{path('customer_login')}}",
+            register: "{{path('customer_register')}}"
+        };
+        base_url = "{{ path('homepage') }}";
+
+    </script>
+</head>
+
+<body>
+
+{% set customerInfo = app.session.get('customer') %}
+{% set route = app.request.attributes.get('_route') %}
+
+<div class="wrapper">
+    <section id="header-main" class="{% if route == 'shop' %}header-small {% endif %}cf">
+        <h1 class="logo left"><a class="logo-link" href="{{ path('homepage') }}">UngaBunga</a></h1>
+        {% if route == 'shop' %}
+            <nav id="nav-main-top" class="nav bold left" role="main">
+                <ul class="menu">
+                    <li class="item"><a href="{{ path('homepage') }}">Блог</a></li>
+                    <li class="item"><a class="goto" data-goto="delivery-points" href="#">Пункты выдачи</a></li>
+                    <li class="item"><a class="goto" data-goto="faq" href="#">FAQ</a></li>
+                </ul>
+            </nav>
+        {% else %}
+            {% if(route == 'shop') %}
+                <nav id="nav-main-top" class="nav nav-header-high left" role="main">
+                    <ul class="menu">
+                        {% for category in blogCategories %}
+                            <li class="item"><a href="{{ path('blog_category_entries', {'slug': category.slug}) }}">{{ category.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            {% endif %}
+        {% endif %}
+        <div class="buttons right">
+            {% if customerInfo %}
+                {% if route == 'shop' %}
+                    <a class="button button-green action-new-application goto" data-goto="application-form" href="#">
+                        Оформить заявку
+                    </a>
+                {% else %}
+                    <a class="button button-green action-logout" href="{{ path('customer_logout') }}">
+                        Выйти
+                    </a>
+                {% endif %}
+            {% else %}
+                <a class="button button-dark action-register" href="{{ path('customer_register') }}">
+                    Вступить в клуб
+                </a>
+                <a class="button button-green action-login" href="{{ path('customer_login') }}">
+                    Войти
+                </a>
+            {% endif %}
+        </div>
+    </section>
+    {% block body %}{% endblock %}
+
+    <section id="footer-main">
+        <h1 class="logo left"><a class="logo-link" href="{{ path('homepage') }}">UngaBunga</a></h1>
+        {% if app.request.attributes.get('_route') == 'shop' %}
+            <nav id="nav-main-top" class="nav bold left" role="main">
+                <ul class="menu">
+                    <li class="item"><a href="{{ path('homepage') }}">Блог</a></li>
+                    <li class="item"><a class="goto" data-goto="delivery-points" href="#">Пункты выдачи</a></li>
+                    <li class="item"><a class="goto" data-goto="faq" href="#">FAQ</a></li>
+                </ul>
+            </nav>
+        {% else %}
+            <nav id="nav-main" class="nav left" role="main">
+                <ul class="menu">
+                    {% for category in blogCategories %}
+                        <li class="item"><a href="{{ path('blog_category_entries', {'slug': category.slug}) }}">{{ category.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        {% endif %}
+        <div class="buttons right">
+            {% if customerInfo %}
+                {% if route == 'shop' %}
+                    <a class="button button-green action-new-application goto" data-goto="application-form" href="#">
+                        Оформить заявку
+                    </a>
+                {% else %}
+                    <a class="button button-green action-logout" href="{{ path('customer_logout') }}">
+                        Выйти
+                    </a>
+                {% endif %}
+            {% else %}
+                <a class="button button-dark action-register" href="{{ path('customer_register') }}">
+                    Вступить в клуб
+                </a>
+                <a class="button button-green action-login" href="{{ path('customer_login') }}">
+                    Войти
+                </a>
+            {% endif %}
+        </div>
+    </section>
+</div>
+
+{% if(route == 'shop') %}
+    <div class="popup-wrapper hidden">
+        {{ include('UngaBungaBundle:Widgets:checkout_form.html.twig') }}
+    </div>
+{% endif %}
+
+
+
+<!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<!-- Include all JavaScripts, compiled by Assetic -->
+{% javascripts
+'@UngaBungaBundle/Resources/public/js/jquery.ikSelect.min.js'
+'@UngaBungaBundle/Resources/public/js/jquery.flexslider-min.js'
+'@UngaBungaBundle/Resources/public/js/plugins.js'
+'@UngaBungaBundle/Resources/public/js/main.js'
+%}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+
+
+{% block javascripts %}{% endblock %}
+{% block js %}{% endblock %}
+</body>
+</html>

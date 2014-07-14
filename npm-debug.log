@@ -1,0 +1,64 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'node-mkdirp' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose node symlink /usr/bin/node
+5 verbose cache add [ 'node-mkdirp', null ]
+6 verbose cache add name=undefined spec="node-mkdirp" args=["node-mkdirp",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'node-mkdirp',
+7 verbose parsed url   path: 'node-mkdirp',
+7 verbose parsed url   href: 'node-mkdirp' }
+8 silly lockFile 76b5e3cb-node-mkdirp node-mkdirp
+9 verbose lock node-mkdirp /root/.npm/76b5e3cb-node-mkdirp.lock
+10 silly lockFile 76b5e3cb-node-mkdirp node-mkdirp
+11 silly lockFile 76b5e3cb-node-mkdirp node-mkdirp
+12 verbose addNamed [ 'node-mkdirp', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile a268f6ae-node-mkdirp node-mkdirp@
+15 verbose lock node-mkdirp@ /root/.npm/a268f6ae-node-mkdirp.lock
+16 silly addNameRange { name: 'node-mkdirp', range: '*', hasData: false }
+17 verbose url raw node-mkdirp
+18 verbose url resolving [ 'http://registry.npmjs.org/', './node-mkdirp' ]
+19 verbose url resolved http://registry.npmjs.org/node-mkdirp
+20 info trying registry request attempt 1 at 15:29:00
+21 http GET http://registry.npmjs.org/node-mkdirp
+22 http 404 http://registry.npmjs.org/node-mkdirp
+23 silly registry.get cb [ 404,
+23 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+23 silly registry.get     'content-type': 'application/json',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     'cache-control': 'max-age=0',
+23 silly registry.get     'content-length': '52',
+23 silly registry.get     'accept-ranges': 'bytes',
+23 silly registry.get     date: 'Tue, 20 May 2014 11:29:00 GMT',
+23 silly registry.get     age: '0',
+23 silly registry.get     connection: 'keep-alive',
+23 silly registry.get     'x-served-by': 'cache-v36-ASH, cache-fra1227-FRA',
+23 silly registry.get     'x-cache': 'MISS, MISS',
+23 silly registry.get     'x-cache-hits': '0, 0',
+23 silly registry.get     'x-timer': 'S1400585340.390392065,VS0,VS43,VE57,VE103' } ]
+24 silly lockFile a268f6ae-node-mkdirp node-mkdirp@
+25 silly lockFile a268f6ae-node-mkdirp node-mkdirp@
+26 error 404 'node-mkdirp' is not in the npm registry.
+26 error 404 You should bug the author to publish it
+26 error 404
+26 error 404 Maybe try 'npm search mkdirp'
+26 error 404
+26 error 404 Note that you can also install from a
+26 error 404 tarball, folder, or http url, or git url.
+27 error System Linux 2.6.32-042stab085.17
+28 error command "/usr/bin/node" "/usr/bin/npm" "install" "node-mkdirp"
+29 error cwd /var/www
+30 error node -v v0.10.26
+31 error npm -v 1.4.3
+32 error code E404
+33 verbose exit [ 1, true ]

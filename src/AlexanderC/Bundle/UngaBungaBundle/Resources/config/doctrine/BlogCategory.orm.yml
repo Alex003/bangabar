@@ -1,0 +1,49 @@
+AlexanderC\Bundle\UngaBungaBundle\Entity\BlogCategory:
+    type:  entity
+    repositoryClass: AlexanderC\Bundle\UngaBungaBundle\Repository\BlogCategoryRepository
+    table: blog_category
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+          type: string
+          length: 255
+          nullable: false
+          unique: true
+        slug:
+          type: string
+          length: 255
+          gedmo:
+            slug:
+              separator: -
+              #style: camel
+              updateable: false
+              unique: true
+              fields:
+                - name
+        hidden:
+          type: boolean
+          nullable: false
+          default: false
+        created:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: create
+        updated:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: update
+    indexes:
+        blog_category_slug_idx:
+          columns: [slug]
+    oneToMany:
+          entries:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\BlogEntry
+            mappedBy: category
+            cascade: ["all"]
+

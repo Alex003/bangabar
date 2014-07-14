@@ -1,0 +1,29 @@
+AlexanderC\Bundle\UngaBungaBundle\Entity\ApplicationData:
+    type:  entity
+    repositoryClass: AlexanderC\Bundle\UngaBungaBundle\Repository\ApplicationData
+    table: application_data
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        quantity:
+          type: integer
+          nullable: false
+          default: 0
+    manyToOne:
+        application:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\Application
+            inversedBy: data
+            joinColumn:
+                name: application_id
+                referencedColumnName: id
+            cascade: ["persist"]
+        shop_entry:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\ShopEntry
+            joinColumn:
+                name: shop_entry_id
+                referencedColumnName: id
+            cascade: ["persist"]
+

@@ -1,0 +1,17 @@
+AlexanderC\Bundle\UngaBungaBundle\Entity\Settings:
+    type:  entity
+    repositoryClass: AlexanderC\Bundle\UngaBungaBundle\Repository\SettingsRepository
+    table: settings
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        applicant_info:
+          type: text
+          nullable: true
+        slider_images:
+          type: array
+          nullable: true
+

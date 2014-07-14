@@ -1,0 +1,47 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{{ path('applicationreplysubject') }}">
+                Темы ответов
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('applicationreplysubject_new') }}">
+                Добавить тему ответов
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('applicationreplysubject_edit', { 'id': entity.id }) }}">
+                Редактировать текущую тему ответов
+            </a>
+        </li>
+        <li class="active">Просмотр темы ответов</li>
+    </ul>
+
+    <table class="record_properties table table-hover">
+        <tbody>
+            <tr>
+                <th>Название</th>
+                <td>{{ entity.name }}</td>
+            </tr>
+            <tr>
+                <th>Тема</th>
+                <td>{{ entity.subject }}</td>
+            </tr>
+            <tr>
+                <th>Шаблон Письма</th>
+                <td>{{ entity.assignedtext }}</td>
+            </tr>
+            <tr>
+                <th>Обновлено</th>
+                <td>{{ entity.updated|date('d.m.Y H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    {{ form(delete_form) }}
+
+
+{% endblock %}

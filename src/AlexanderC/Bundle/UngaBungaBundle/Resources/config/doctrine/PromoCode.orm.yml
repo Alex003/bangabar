@@ -1,0 +1,37 @@
+AlexanderC\Bundle\UngaBungaBundle\Entity\PromoCode:
+    type:  entity
+    repositoryClass: AlexanderC\Bundle\UngaBungaBundle\Repository\PromoCodeRepository
+    table: promo_code
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        code:
+          type: string
+          length: 255
+          nullable: false
+        description:
+          type: text
+          nullable: true
+        created:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: create
+        updated:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: update
+    indexes:
+        promo_code_code_idx:
+          columns: [code]
+    oneToMany:
+          customers:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\Customer
+            mappedBy: promo_code
+            cascade: ["all"]
+
+

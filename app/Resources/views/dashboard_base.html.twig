@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Панель Администратора</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('/css/bootstrap-wysihtml5.css') }}" rel="stylesheet" media="screen">
+
+    {% block stylesheets %}{% endblock %}
+    {% block css %}{% endblock %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+    <!-- HTML5 Shim and Respond.js add IE8 support of HTML5 elements and media queries -->
+    {% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
+
+</head>
+
+<body>
+<style>
+    .preview-thumb {
+        width: 50px;
+        height: 50px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: auto 120%;
+    }
+    textarea {
+        min-height: 300px;
+    }
+</style>
+{{ include('UngaBungaBundle:Widgets:dashboard_menu.html.twig') }}
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+</div>
+
+<script>window.attachmentUploadUrl = "{{ url('attachment_upload') }}"</script>
+<!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!-- Include all JavaScripts, compiled by Assetic -->
+{% javascripts
+'@UngaBungaBundle/Resources/public/js/bootstrap.js'
+'@UngaBungaBundle/Resources/public/js/wysihtml5-0.3.0.js'
+'@UngaBungaBundle/Resources/public/js/bootstrap3-wysihtml5.js'
+'@UngaBungaBundle/Resources/public/js/locale/bootstrap-wysihtml5.ru-RU.js'
+'@UngaBungaBundle/Resources/public/js/plugins.js'
+'@UngaBungaBundle/Resources/public/js/main.js'
+%}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+{% block javascripts %}{% endblock %}
+{% block js %}{% endblock %}
+</body>
+</html>

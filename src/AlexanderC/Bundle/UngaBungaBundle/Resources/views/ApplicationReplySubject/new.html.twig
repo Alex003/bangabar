@@ -1,0 +1,18 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+
+    <ul class="record_actions breadcrumb">
+        <li>
+            <a href="{{ path('applicationreplysubject') }}">
+                Темы ответов
+            </a>
+        </li>
+        <li class="active">Добавить тему ответов</li>
+    </ul>
+
+    <div class="col-md-7 column">
+        {{ form(form) }}
+    </div>
+
+{% endblock %}

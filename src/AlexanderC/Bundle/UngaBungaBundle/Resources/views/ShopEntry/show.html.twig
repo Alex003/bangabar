@@ -1,0 +1,50 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{{ path('shopentry') }}">
+                Магазин
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('shopentry_new') }}">
+                Добавить товар
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('shopentry_edit', { 'id': entity.id }) }}">
+                Редактировать текущий товар
+            </a>
+        </li>
+        <li class="active">Просмотр товара</li>
+    </ul>
+
+    <table class="record_properties table table-hover">
+        <tbody>
+            <tr>
+                <th>Название</th>
+                <td>{{ entity.title }}</td>
+            </tr>
+            <tr>
+                <th>Цена</th>
+                <td>{{ entity.price }}</td>
+            </tr>
+            <tr>
+                <th>Картинка</th>
+                <td><div class="preview-thumb" style="background-image: url({{ entity.imageurl }})"></div></td>
+            </tr>
+            <tr>
+                <th>Добавлен</th>
+                <td>{{ entity.created|date('d.m.Y H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Обновлен</th>
+                <td>{{ entity.updated|date('d.m.Y H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    {{ form(delete_form) }}
+
+{% endblock %}

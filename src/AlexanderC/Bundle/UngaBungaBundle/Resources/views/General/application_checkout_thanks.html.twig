@@ -1,0 +1,32 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    {% set customerInfo = app.session.get('customer') %}
+    {% set totalPrice = 0 %}
+
+    <div class="jumbotron">
+        <h1>Детали Заказа</h1>
+        <p>
+            <ul>
+                <li>Номер Заказа: <b>{{ application.uniqueIdx }}</b></li>
+                <li>Номер Кошелька для оплаты: <b>{{ application.operator.wallet }}</b></li>
+                <li>Пункт выдачи: <b>{{ application.deliveryPoint.name }}</b></li>
+                <li>Перечень заказанных позиций:
+                    <ul>
+                        {% for data in application.data %}
+                            {% set totalPrice = totalPrice + data.shopEntry.price * data.quantity %}
+
+                            <li>{{ data.quantity }} x <b>{{ data.shopEntry.title }}</b></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li>Общая стоимость: <b>{{ totalPrice }} руб.</b></li>
+            </ul>
+        </p>
+
+        <br/><br/>
+        <p>
+            <b>Информация о пункте выдачи:</b><br/><small>{{ application.deliveryPoint.info }}</small>
+        </p>
+    </div>
+{% endblock %}

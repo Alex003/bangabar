@@ -1,0 +1,28 @@
+parameters:
+    database_driver:   pdo_mysql
+
+    database_host:     127.0.0.1
+    database_port:     ~
+    database_name:     ungabunga
+    database_user:     root
+    database_password: ~
+
+    database_host_slave1:     127.0.0.1
+    database_port_slave1:     ~
+    database_name_slave1:     ungabunga
+    database_user_slave1:     root
+    database_password_slave1: ~
+
+    mailer_transport: gmail
+    mailer_host:      ~
+    mailer_user:      leoside4@gmail.com
+    mailer_password:  qweqwe12
+
+    locale:            ru
+    secret:            6c32197521ead6258dc09f2ef62f58eb
+
+    redis_default_dsn: "redis://secret@localhost"
+    redis_cache_dsn:   "redis://secret@localhost"
+    redis_session_dsn: "redis://secret@localhost"
+    redis_cluster_dsn:
+        - redis://secret@localhost?weight=10

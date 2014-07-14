@@ -1,0 +1,33 @@
+{% set customerInfo = app.session.get('customer') %}
+{% set totalPrice = 0 %}
+
+<h1>Благодарим Вас за заказ!</h1>
+
+<p><small>[{{ application.created|date("H:i:s d M Y") }}]</small></p>
+
+<p>
+Детали Заказа:
+    <ol>
+        <li>Номер Заказа: {{ application.uniqueIdx }}</li>
+        <li>Номер Кошелька для оплаты: {{ application.operator.wallet }}</li>
+        <li>Пункт выдачи: {{ application.deliveryPoint.name }}</li>
+        <li>Перечень заказанных позиций:
+            <ul>
+                {% for data in application.data %}
+                {% set itemPrice = data.shopEntry.price * data.quantity %}
+                {% set totalPrice = totalPrice + itemPrice %}
+                <li>{{ data.quantity }} x {{ data.shopEntry.title }} = {{ itemPrice }} руб.</li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li>Общая стоимость: {{ totalPrice }} руб.</li>
+    </ol>
+</p>
+
+<h4>Информация о пункте выдачи:</h4>
+
+<p>{{ application.deliveryPoint.info|raw }}</p>
+
+<h4>Рекомендации и инструкции</h4>
+
+<p>{{ info|raw }}</p>

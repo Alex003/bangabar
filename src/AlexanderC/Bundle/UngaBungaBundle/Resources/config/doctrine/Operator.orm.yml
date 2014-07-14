@@ -1,0 +1,69 @@
+AlexanderC\Bundle\UngaBungaBundle\Entity\Operator:
+    type:  entity
+    repositoryClass: AlexanderC\Bundle\UngaBungaBundle\Repository\OperatorRepository
+    table: operator
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        email:
+          type: string
+          length: 255
+          nullable: false
+          unique: true
+        nick:
+          type: string
+          length: 255
+          nullable: false
+          unique: true
+        wallet:
+          type: string
+          length: 255
+          nullable: false
+        apps_count:
+          type: integer
+          nullable: false
+          default: 0
+        closed_apps_count:
+          type: integer
+          nullable: false
+          default: 0
+        active:
+          type: boolean
+          nullable: false
+          default: true
+        created:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: create
+        updated:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: update
+    indexes:
+        operator_email_idx:
+          columns: [email]
+        operator_nick_idx:
+          columns: [nick]
+        operator_wallet_idx:
+          columns: [wallet]
+        operator_apps_count_idx:
+          columns: [apps_count]
+    manyToOne:
+        supervisor:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\Supervisor
+            inversedBy: operators
+            joinColumn:
+                name: supervisor_id
+                referencedColumnName: id
+            cascade: ["persist"]
+    oneToMany:
+          applications:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\Application
+            mappedBy: operator
+            cascade: ["all"]
+

@@ -1,0 +1,30 @@
+deliverypoint:
+    pattern:  /
+    defaults: { _controller: "UngaBungaBundle:DeliveryPoint:index" }
+
+deliverypoint_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "UngaBungaBundle:DeliveryPoint:show" }
+
+deliverypoint_new:
+    pattern:  /new
+    defaults: { _controller: "UngaBungaBundle:DeliveryPoint:new" }
+
+deliverypoint_create:
+    pattern:  /create
+    defaults: { _controller: "UngaBungaBundle:DeliveryPoint:create" }
+    requirements: { _method: post }
+
+deliverypoint_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "UngaBungaBundle:DeliveryPoint:edit" }
+
+deliverypoint_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "UngaBungaBundle:DeliveryPoint:update" }
+    requirements: { _method: post|put }
+
+deliverypoint_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "UngaBungaBundle:DeliveryPoint:delete" }
+    requirements: { _method: post|delete }

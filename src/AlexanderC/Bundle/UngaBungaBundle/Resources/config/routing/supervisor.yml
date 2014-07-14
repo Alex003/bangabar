@@ -1,0 +1,30 @@
+supervisor:
+    pattern:  /
+    defaults: { _controller: "UngaBungaBundle:Supervisor:index" }
+
+supervisor_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "UngaBungaBundle:Supervisor:show" }
+
+supervisor_new:
+    pattern:  /new
+    defaults: { _controller: "UngaBungaBundle:Supervisor:new" }
+
+supervisor_create:
+    pattern:  /create
+    defaults: { _controller: "UngaBungaBundle:Supervisor:create" }
+    requirements: { _method: post }
+
+supervisor_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "UngaBungaBundle:Supervisor:edit" }
+
+supervisor_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "UngaBungaBundle:Supervisor:update" }
+    requirements: { _method: post|put }
+
+supervisor_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "UngaBungaBundle:Supervisor:delete" }
+    requirements: { _method: post|delete }

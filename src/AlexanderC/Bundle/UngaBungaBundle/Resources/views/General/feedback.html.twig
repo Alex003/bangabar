@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    {% for flashMessage in app.session.flashbag.get('success') %}
+    <h3>{{ flashMessage }}</h3>
+    {% endfor %}
+
+    <form method="POST">
+        {{ form_rest(form) }}
+
+        <input type="submit"/>
+    </form>
+
+{% endblock %}

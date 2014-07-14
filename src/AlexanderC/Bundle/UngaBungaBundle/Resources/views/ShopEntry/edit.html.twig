@@ -1,0 +1,27 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+
+    <ul class="breadcrumb">
+        <li>
+            <a href="{{ path('shopentry') }}">
+                Магазин
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('shopentry_new') }}">
+                Добавить товар
+            </a>
+        </li>
+        <li class="active">Редактирование товара</li>
+    </ul>
+
+    <div class="col-md-8 column">
+        {{ form(edit_form) }}
+        <br/>
+        <ul class="record_actions list-inline">
+            <li>{{ form(delete_form) }}</li>
+        </ul>
+    </div>
+
+{% endblock %}

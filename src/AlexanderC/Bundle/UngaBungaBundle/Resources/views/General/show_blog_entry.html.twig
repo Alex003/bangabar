@@ -1,0 +1,31 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <div class="separator">
+        Блоги
+    </div>
+
+    <section id="content-main" class="single-post">
+
+        <article class="post">
+            <div class="content-wrapper">
+                <header class="post-head">
+                    <ul class="breadcrumbs">
+                        <li><a href="{{ path('homepage') }}">Главная</a></li>
+                        <li><a href="{{ path('blog_category_entries', {'slug': blogEntry.category.slug}) }}">{{ blogEntry.category.name }}</a></li>
+                        <li class="current"><a href="{{ path('blog_entry_show', {'year': blogEntry.created|date('Y-m-d'), 'slug': blogEntry.slug}) }}">{{ blogEntry.title }}</a></li>
+                    </ul>
+                </header>
+
+                <h2 class="title">
+                    {{ blogEntry.title }}
+                </h2>
+
+                <div class="story">
+                    {{ blogEntry.text|raw }}
+                </div>
+            </div>
+        </article>
+
+    </section>
+{% endblock %}

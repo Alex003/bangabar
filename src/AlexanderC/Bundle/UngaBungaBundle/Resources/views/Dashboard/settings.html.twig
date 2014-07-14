@@ -1,0 +1,28 @@
+{% extends '::dashboard_base.html.twig' %}
+{% block body -%}
+
+    <div class="col-md-8 column">
+        {{ form(form) }}
+    </div>
+
+{% endblock %}
+
+{% block js %}
+<script>
+    $().ready(function() {
+        var mImgs = $("#alexanderc_bundle_ungabungabundle_settings_slider_images_text");
+        var plh = $("<div class='form-group'>" +
+                "<input " +
+                    "type='text' " +
+                    "class='form-control' " +
+                    "placeholder='Кликните чтобы загрузить изображение...' " +
+                    "onclick='$(this).attachmentUpload()'>" +
+                "</div>");
+        plh.insertBefore(mImgs);
+
+        $(window).bind("attachment-upload-success", function() {
+            mImgs.val(mImgs.val() + "\n" + plh.find("input").val());
+        });
+    });
+</script>
+{% endblock %}

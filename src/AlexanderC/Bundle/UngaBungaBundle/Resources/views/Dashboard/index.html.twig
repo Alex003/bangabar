@@ -1,0 +1,18 @@
+{% extends '::dashboard_base.html.twig' %}
+{% block body -%}
+
+    <div class="jumbotron">
+        <h1>Общая Статистика</h1>
+
+        <p>
+            <ul>
+                <li>Всего Операторов: <span class="alert-success">{{ operatorsCount }}</span></li>
+                <li>Активных Операторов: <span class="alert-success">{{ activeOperatorsCount }}</span></li>
+                <li>Всего Заявок: <span class="alert-success">{{ applicationsCount }}</span></li>
+                <li>Заявок в Обработке: <span class="alert-success">{{ activeApplicationsCount }}</span></li>
+                <li>Заявок Завершённых: <span class="alert-success">{{ closedApplicationsCount }}</span></li>
+            </ul>
+        </p>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+applicationreplysubject:
+    pattern:  /
+    defaults: { _controller: "UngaBungaBundle:ApplicationReplySubject:index" }
+
+applicationreplysubject_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "UngaBungaBundle:ApplicationReplySubject:show" }
+
+applicationreplysubject_new:
+    pattern:  /new
+    defaults: { _controller: "UngaBungaBundle:ApplicationReplySubject:new" }
+
+applicationreplysubject_create:
+    pattern:  /create
+    defaults: { _controller: "UngaBungaBundle:ApplicationReplySubject:create" }
+    requirements: { _method: post }
+
+applicationreplysubject_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "UngaBungaBundle:ApplicationReplySubject:edit" }
+
+applicationreplysubject_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "UngaBungaBundle:ApplicationReplySubject:update" }
+    requirements: { _method: post|put }
+
+applicationreplysubject_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "UngaBungaBundle:ApplicationReplySubject:delete" }
+    requirements: { _method: post|delete }

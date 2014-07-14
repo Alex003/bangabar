@@ -1,0 +1,30 @@
+promocode:
+    pattern:  /
+    defaults: { _controller: "UngaBungaBundle:PromoCode:index" }
+
+promocode_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "UngaBungaBundle:PromoCode:show" }
+
+promocode_new:
+    pattern:  /new
+    defaults: { _controller: "UngaBungaBundle:PromoCode:new" }
+
+promocode_create:
+    pattern:  /create
+    defaults: { _controller: "UngaBungaBundle:PromoCode:create" }
+    requirements: { _method: post }
+
+promocode_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "UngaBungaBundle:PromoCode:edit" }
+
+promocode_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "UngaBungaBundle:PromoCode:update" }
+    requirements: { _method: post|put }
+
+promocode_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "UngaBungaBundle:PromoCode:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,11 @@
+dashboard:
+    pattern:  /
+    defaults: { _controller: "UngaBungaBundle:Dashboard:index" }
+
+settings:
+    pattern: /settings
+    defaults: { _controller: "UngaBungaBundle:Dashboard:settings" }
+
+attachment_upload:
+    pattern: /attachment/upload
+    defaults: { _controller: "UngaBungaBundle:Dashboard:uploadAttachment" }

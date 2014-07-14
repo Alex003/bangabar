@@ -1,0 +1,47 @@
+<div class="popup-wrapper hidden">
+    <div class="popup hidden register_form">
+        <header class="popup-head grey cf">
+            <span class="title left">Регистрация</span>
+            <a class="close-popup right" href="#">закрыть</a>
+        </header>
+
+        <form action="" method="POST">
+            <div class="inputs">
+                <div class="input
+                 {% if form.email.vars.errors|length %}error{% endif %}
+                ">
+                    {{ form_label(form.email) }}
+                    {{ form_widget(form.email) }}
+                </div>
+                <div class="input
+                 {% if form.password.first.vars.errors|length %}error{% endif %}
+                ">
+                    <label for="alexanderc_bundle_ungabungabundle_customer_password_first">Введите пароль</label>
+                    {{ form_widget(form.password.first) }}
+                </div>
+                <div class="input
+                {% if form.password.second.vars.errors|length %}error{% endif %}
+                ">
+                    <label for="alexanderc_bundle_ungabungabundle_customer_password_second">Введите пароль</label>
+                    {{ form_widget(form.password.second) }}
+                </div>
+                <div class="input
+                {% if form.promo_code_text.vars.errors|length %}error{% endif %}
+                ">
+                    {{ form_label(form.promo_code_text) }}
+                    {{ form_widget(form.promo_code_text) }}
+                </div>
+            </div>
+            <div class="error msg">
+                {{ form_errors(form.email) }}
+                {{ form_errors(form.password.first) }}
+                {{ form_errors(form.password.second) }}
+                {{ form_errors(form.promo_code_text) }}
+            </div>
+            <div class="submit buttons">
+                <input class="button button-submit register" type="submit" value="Зарегистрироваться"/>
+            </div>
+            {{ form_widget(form._token) }}
+        </form>
+    </div>
+</div>

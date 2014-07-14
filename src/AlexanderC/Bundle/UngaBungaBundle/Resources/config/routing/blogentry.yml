@@ -1,0 +1,30 @@
+blogentry:
+    pattern:  /
+    defaults: { _controller: "UngaBungaBundle:BlogEntry:index" }
+
+blogentry_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "UngaBungaBundle:BlogEntry:show" }
+
+blogentry_new:
+    pattern:  /new
+    defaults: { _controller: "UngaBungaBundle:BlogEntry:new" }
+
+blogentry_create:
+    pattern:  /create
+    defaults: { _controller: "UngaBungaBundle:BlogEntry:create" }
+    requirements: { _method: post }
+
+blogentry_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "UngaBungaBundle:BlogEntry:edit" }
+
+blogentry_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "UngaBungaBundle:BlogEntry:update" }
+    requirements: { _method: post|put }
+
+blogentry_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "UngaBungaBundle:BlogEntry:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,45 @@
+homepage:
+    pattern:  /{offset}
+    defaults: { _controller: "UngaBungaBundle:General:index", offset: 0 }
+    requirements:
+      offset: \d+
+
+customer_register:
+    pattern: /customer/register
+    defaults: { _controller: "UngaBungaBundle:General:customerRegister" }
+
+customer_register_confirmation:
+    pattern: /customer/register/confirmation/{email}/{token}
+    defaults: { _controller: "UngaBungaBundle:General:customerRegisterConfirmation" }
+
+customer_login:
+    pattern: /customer/login
+    defaults: { _controller: "UngaBungaBundle:General:customerLogin" }
+
+customer_logout:
+    pattern: /customer/logout
+    defaults: { _controller: "UngaBungaBundle:General:customerLogout" }
+
+blog_category_entries:
+    pattern: /blog/{slug}/{offset}
+    defaults: { _controller: "UngaBungaBundle:General:ShowBlogCategoryEntries", offset: 0 }
+
+blog_entry_show:
+    pattern: /blog/entry/{year}/{slug}
+    defaults: { _controller: "UngaBungaBundle:General:ShowBlogEntry", offset: 0 }
+
+feedback:
+    pattern: /feedback
+    defaults: { _controller: "UngaBungaBundle:General:feedback" }
+
+shop:
+    pattern: /shop/
+    defaults: { _controller: "UngaBungaBundle:General:shop" }
+
+application_checkout:
+    pattern: /application/checkout
+    defaults: { _controller: "UngaBungaBundle:General:applicationCheckout" }
+
+application_reply_create:
+    pattern: /application/{uniqueIdx}/reply
+    defaults: { _controller: "UngaBungaBundle:General:applicationReplyCreate" }

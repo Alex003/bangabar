@@ -1,0 +1,29 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{{ path('blogcategory') }}">
+                Категории
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('blogcategory_new') }}">
+                Добавить категорию
+            </a>
+        </li>
+        <li class="active">Редактирование категории</li>
+    </ul>
+
+    <div class="col-md-4 column">
+        {{ form(edit_form) }}
+        <br/>
+        <ul class="record_actions list-inline">
+            <li>{{ form(delete_form) }}</li>
+        </ul>
+    </div>
+
+
+
+
+{% endblock %}

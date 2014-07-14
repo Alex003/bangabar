@@ -1,0 +1,10 @@
+application:
+    pattern:  /
+    defaults: { _controller: "UngaBungaBundle:Application:index" }
+
+application_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "UngaBungaBundle:Application:show" }
+
+
+

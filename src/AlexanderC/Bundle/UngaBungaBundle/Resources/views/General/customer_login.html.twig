@@ -1,0 +1,32 @@
+<div class="popup-wrapper hidden">
+    <div class="popup hidden login_form">
+        <header class="popup-head grey cf">
+            <span class="title left">Вход</span>
+            <a class="close-popup right" href="#">закрыть</a>
+        </header>
+
+        <form id="loginForm" action="" method="POST">
+            <div class="inputs">
+                <div class="input
+                 {% if form.email.vars.errors|length %}error{% endif %}
+                ">
+                    {{ form_label(form.email) }}
+                    {{ form_widget(form.email) }}
+                </div>
+                <div class="input
+                {% if form.password.vars.errors|length %}error{% endif %}
+                ">
+                    {{ form_label(form.password) }}
+                    {{ form_widget(form.password) }}
+                </div>
+            </div>
+            <div class="error msg">
+                {{ form_errors(form) }}
+            </div>
+            <div class="submit buttons">
+                <input class="button button-submit register" type="submit" value="Войти"/>
+            </div>
+            {{ form_widget(form._token) }}
+        </form>
+    </div>
+</div>

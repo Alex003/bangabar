@@ -6,5 +6,9 @@ application_show:
     pattern:  /{id}/show
     defaults: { _controller: "UngaBungaBundle:Application:show" }
 
+application_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "UngaBungaBundle:Application:delete" }
+
 
 

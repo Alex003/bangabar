@@ -42,4 +42,14 @@ class CustomerRepository extends EntityRepository
             )->setParameter('customer', $customer)
             ->getSingleScalarResult();
     }
+
+    /**
+     * @return int
+     */
+    public function countAll()
+    {
+        return $this->getEntityManager()
+            ->createQuery("SELECT COUNT(o.id) FROM UngaBungaBundle:Customer o")
+            ->getSingleScalarResult();
+    }
 } 

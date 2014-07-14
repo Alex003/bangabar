@@ -70,13 +70,14 @@ class DashboardController extends Controller
         $applicationsCount = $em->getRepository('UngaBungaBundle:Application')->countAll();
         $activeApplicationsCount = $em->getRepository('UngaBungaBundle:Application')->countActive();
         $closedApplicationsCount = $em->getRepository('UngaBungaBundle:Application')->countClosed();
-
+        $customersCount = $em->getRepository('UngaBungaBundle:Customer')->countAll();
         return $this->render('UngaBungaBundle:Dashboard:index.html.twig', array(
              'operatorsCount' => $operatorsCount,
              'activeOperatorsCount' => $activeOperatorsCount,
              'applicationsCount' => $applicationsCount,
              'activeApplicationsCount' => $activeApplicationsCount,
-             'closedApplicationsCount' => $closedApplicationsCount
+             'closedApplicationsCount' => $closedApplicationsCount,
+             'customersCount' => $customersCount
         ));
     }
 

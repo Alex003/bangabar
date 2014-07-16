@@ -130,7 +130,7 @@ jQuery(function($) {
                     checkout.fadeIn();
                     checkout.find('.order-number .value').text(data.data.uniqueIdx);
                     checkout.find('.wallet').text(data.data.wallet);
-
+                    checkout.find('.positions .position' ).remove();
                     for(var i = 0; i < data.applicationData.length; i++) {
 
                     total_price += data.applicationData[i]['totalPrice'];

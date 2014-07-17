@@ -8,6 +8,7 @@
 namespace AlexanderC\Bundle\UngaBungaBundle\Controller;
 
 
+use AlexanderC\Bundle\UngaBungaBundle\Form\FaqType;
 use AlexanderC\Bundle\UngaBungaBundle\Form\SettingsType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -108,4 +109,33 @@ class DashboardController extends Controller
             'form' => $form->createView()
         ));
     }
+
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function faqAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $faq = $em->getRepository("UngaBungaBundle:Faq")->findFirst();
+        $form = $this->createForm(new FaqType(), $faq, array(
+            'method' => 'POST',
+        ));
+
+        $form->add('submit', 'submit', array('label' => 'Сохранить'));
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($faq);
+            $em->flush();
+        }
+
+        return $this->render('UngaBungaBundle:Dashboard:faq.html.twig', array(
+            'settings' => $faq,
+            'form' => $form->createView()
+        ));
+    }
+
 } 

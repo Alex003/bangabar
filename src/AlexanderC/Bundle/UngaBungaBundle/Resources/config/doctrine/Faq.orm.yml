@@ -1,0 +1,13 @@
+AlexanderC\Bundle\UngaBungaBundle\Entity\Faq:
+    type:  entity
+    repositoryClass: AlexanderC\Bundle\UngaBungaBundle\Repository\FaqRepository
+    table: faq
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        content:
+          type: text
+          nullable: true

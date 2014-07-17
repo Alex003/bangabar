@@ -1,0 +1,33 @@
+
+
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <div class="separator">
+        FAQ
+    </div>
+
+    <section id="content-main" class="single-post">
+
+        <article class="post">
+            <div class="content-wrapper">
+                <header class="post-head">
+                    <ul class="breadcrumbs">
+                        <li><a href="{{ path('homepage') }}">Главная</a></li>
+                        <li><a href="{{ path('shop') }}">Магазин</a></li>
+                        <li class="current"><a href="{{ path('h_faq') }}">FAQ</a></li>
+                    </ul>
+                </header>
+
+                <h2 class="title">
+
+                </h2>
+
+                <div class="story">
+                    {{ faq.content|raw }}
+                </div>
+            </div>
+        </article>
+
+    </section>
+{% endblock %}

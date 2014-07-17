@@ -36,6 +36,10 @@ shop:
     pattern: /shop/
     defaults: { _controller: "UngaBungaBundle:General:shop" }
 
+h_faq:
+    pattern: /shop/faq
+    defaults: { _controller: "UngaBungaBundle:General:faq" }
+
 application_checkout:
     pattern: /application/checkout
     defaults: { _controller: "UngaBungaBundle:General:applicationCheckout" }

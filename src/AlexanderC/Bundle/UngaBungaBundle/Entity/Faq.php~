@@ -1,0 +1,21 @@
+<?php
+
+namespace AlexanderC\Bundle\UngaBungaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Faq
+ */
+class Faq
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $content;
+}

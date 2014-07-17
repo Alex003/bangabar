@@ -6,6 +6,10 @@ settings:
     pattern: /settings
     defaults: { _controller: "UngaBungaBundle:Dashboard:settings" }
 
+faq:
+    pattern: /faq
+    defaults: { _controller: "UngaBungaBundle:Dashboard:faq" }
+
 attachment_upload:
     pattern: /attachment/upload
     defaults: { _controller: "UngaBungaBundle:Dashboard:uploadAttachment" }

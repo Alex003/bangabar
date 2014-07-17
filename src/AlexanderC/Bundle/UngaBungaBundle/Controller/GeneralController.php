@@ -9,6 +9,7 @@ namespace AlexanderC\Bundle\UngaBungaBundle\Controller;
 
 
 use AlexanderC\Bundle\UngaBungaBundle\Entity\Application;
+use AlexanderC\Bundle\UngaBungaBundle\Entity\Faq;
 use AlexanderC\Bundle\UngaBungaBundle\Entity\ApplicationData;
 use AlexanderC\Bundle\UngaBungaBundle\Entity\ApplicationReply;
 use AlexanderC\Bundle\UngaBungaBundle\Entity\Customer;
@@ -626,5 +627,20 @@ class GeneralController extends Controller
         return $this->render('UngaBungaBundle:General:show_blog_entry.html.twig', array(
                                                                                    'blogEntry' => $blogEntry,
                                                                                ));
+    }
+
+    /**
+     * Lists all Faq entities.
+     *
+     */
+    public function faqAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $faq = $em->getRepository("UngaBungaBundle:Faq")->findFirst();
+
+        return $this->render('UngaBungaBundle:General:faq.html.twig', array(
+            'faq' => $faq,
+        ));
     }
 } 

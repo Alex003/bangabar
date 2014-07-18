@@ -197,6 +197,17 @@ class DeliveryPointController extends Controller
                 throw $this->createNotFoundException('Unable to find DeliveryPoint entity.');
             }
 
+            $applications = $em->getRepository('UngaBungaBundle:Application')->findBy(array('delivery_point'=> $entity->getId()));
+            if($applications)
+            {
+                foreach($applications as $application)
+                {
+                    $application->setDeliveryPoint(null);
+                    $em->persist($application);
+                }
+                $em->flush();
+            }
+            
             $em->remove($entity);
             $em->flush();
         }

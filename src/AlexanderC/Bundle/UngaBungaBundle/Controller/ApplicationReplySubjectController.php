@@ -197,6 +197,17 @@ class ApplicationReplySubjectController extends Controller
                 throw $this->createNotFoundException('Unable to find ApplicationReplySubject entity.');
             }
 
+            $applicationReplys = $em->getRepository('UngaBungaBundle:ApplicationReply')->findBy(array('subject'=> $entity->getId()));
+            if($applicationReplys)
+            {
+                foreach($applicationReplys as $applicationReply)
+                {
+                    $applicationReply->setSubject(null);
+                    $em->persist($applicationReply);
+                }
+                $em->flush();
+            }
+
             $em->remove($entity);
             $em->flush();
         }

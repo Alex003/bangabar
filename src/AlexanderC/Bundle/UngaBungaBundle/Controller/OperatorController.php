@@ -197,6 +197,17 @@ class OperatorController extends Controller
                 throw $this->createNotFoundException('Unable to find Operator entity.');
             }
 
+            $applications = $em->getRepository('UngaBungaBundle:Application')->findBy(array('operator'=> $entity->getId()));
+            if($applications)
+            {
+                foreach($applications as $application)
+                {
+                    $application->setOperator(null);
+                    $em->persist($application);
+                }
+                $em->flush();
+            }
+
             $em->remove($entity);
             $em->flush();
         }

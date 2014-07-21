@@ -97,63 +97,62 @@ jQuery(function($) {
 
 	applicationForm.find('input[type="submit"]').on('click', function(e){
 		e.preventDefault();
-        
-        if( jQuery('span.total-price .value').text() == 0)
-        {
-            // popup
-            var checkout = $('.popup-wrapper .popup.checkout_order');
 
-            $('.popup-wrapper').fadeIn();
+
+        if(jQuery('span.total-price .value').text() == 0){
+            var checkout = jQuery('.popup-wrapper .popup.checkout_order');
+            jQuery('.popup-wrapper').fadeIn();
             checkout.fadeIn();
-            return false;
+
+        }else
+        {
+            var data = applicationForm.find('form').serialize();
+            $.ajax({
+                url: ajax_url.checkout,
+                type: "POST",
+                dataType: 'json',
+                success: function(data) {
+                    if(data.code == 1) {
+                        console.log(data.error);
+                    } else {
+                        // popup
+                        var checkout = $('.popup-wrapper .popup.checkout_form');
+                        var total_price = 0;
+                        var items = '';
+
+                        $('.popup-wrapper').fadeIn();
+                        checkout.fadeIn();
+                        checkout.find('.order-number .value').text(data.data.uniqueIdx);
+                        checkout.find('.wallet').text(data.data.wallet);
+
+                        for(var i = 0; i < data.applicationData.length; i++) {
+
+                            total_price += data.applicationData[i]['totalPrice'];
+                            items += ' <div class="position"> 																	\
+                                            <div class="title"> 																\
+                                                '+ data.applicationData[i]['productName']+'										\
+                                        </div> 																					\
+                                            <div class="count"> 																\
+                                                '+ data.applicationData[i]['quantity']+' шт. 									\
+                                            </div> 																				\
+                                            <div class="price"> 																\
+                                                '+ data.applicationData[i]['totalPrice']+' руб. 		\
+                                            </div> 																				\
+                                        </div>';
+                        }
+
+                        checkout.find('.positions' ).append($(items));
+                        checkout.find('.total-price .value').text(total_price);
+                        checkout.find('.delivery-point').text(data.data.deliveryPointName);
+                    }
+                },
+                error: function() {
+                    console.log('error');
+                },
+                data: data
+
+            })
         }
-
-		var data = applicationForm.find('form').serialize();
-		$.ajax({
-			url: ajax_url.checkout,
-			type: "POST",
-			dataType: 'json',
-			success: function(data) {
-				if(data.code == 1) {
-					console.log(data.error);
-				} else {
-					// popup
-					var checkout = $('.popup-wrapper .popup.checkout_form');
-					var total_price = 0;
-					var items = '';
-
-					$('.popup-wrapper').fadeIn();
-					checkout.fadeIn();
-					checkout.find('.order-number .value').text(data.data.uniqueIdx);
-					checkout.find('.wallet').text(data.data.wallet);
-
-					for(var i = 0; i < data.applicationData.length; i++) {
-
-						total_price += data.applicationData[i]['totalPrice'];
-						items += ' <div class="position"> 																	\
-										<div class="title"> 																\
-											'+ data.applicationData[i]['productName']+'										\
-									</div> 																					\
-										<div class="count"> 																\
-											'+ data.applicationData[i]['quantity']+' шт. 									\
-										</div> 																				\
-										<div class="price"> 																\
-											'+ data.applicationData[i]['totalPrice']+' руб. 		\
-										</div> 																				\
-									</div>';
-					}
-
-					checkout.find('.positions' ).append($(items));
-					checkout.find('.total-price .value').text(total_price);
-					checkout.find('.delivery-point').text(data.data.deliveryPointName);
-				}
-			},
-			error: function() {
-				console.log('error');
-			},
-			data: data
-
-		})
 	});
 
 	// Dummy ajax response data

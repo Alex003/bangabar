@@ -97,6 +97,16 @@ jQuery(function($) {
 
 	applicationForm.find('input[type="submit"]').on('click', function(e){
 		e.preventDefault();
+        
+        if( jQuery('span.total-price .value').text() == 0)
+        {
+            // popup
+            var checkout = $('.popup-wrapper .popup.checkout_order');
+
+            $('.popup-wrapper').fadeIn();
+            checkout.fadeIn();
+            return false;
+        }
 
 		var data = applicationForm.find('form').serialize();
 		$.ajax({

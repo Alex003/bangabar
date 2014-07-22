@@ -22,7 +22,11 @@
             </tr>
             <tr>
                 <th>Оператор</th>
-                <td><a href="{{ path('operator_show', { 'id': entity.operator.id }) }}">{{ entity.operator.nick }}</a></td>
+                {% if entity.operator %}
+                    <td><a href="{{ path('operator_show', { 'id': entity.operator.id }) }}">{{ entity.operator.nick }}</a></td>
+                {% else %}
+                    <td><span class="glyphicon glyphicon-minus"></span></td>
+                {% endif %}
             </tr>
             {% if entity.reply %}
                 <tr>

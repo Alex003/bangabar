@@ -36,9 +36,13 @@
                 <tr>
                     <th>Тема Ответа</th>
                     <td>
-                        <a href="{{ path('applicationreplysubject_show', { 'id': entity.reply.subject.id }) }}">
-                            {{ entity.reply.subject.subject[:20] }}{% if entity.reply.subject.subject|length > 20 %}...{% endif %}
-                        </a>
+                        {% if entity.reply.subject %}
+                            <a href="{{ path('applicationreplysubject_show', { 'id': entity.reply.subject.id }) }}">
+                                {{ entity.reply.subject.subject[:20] }}{% if entity.reply.subject.subject|length > 20 %}...{% endif %}
+                            </a>
+                        {% else %}
+                            <span class="glyphicon glyphicon-minus"></span>
+                        {% endif %}
                     </td>
                 </tr>
                 <tr>

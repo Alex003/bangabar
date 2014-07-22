@@ -62,6 +62,27 @@ class ApplicationController extends Controller
             throw $this->createNotFoundException('Unable to find Application entity.');
         }
 
+        $applicationRep = $entity->getReply();
+        if($applicationRep)
+        {
+            $entity->setReply(null);
+            $em->persist($entity);
+            $em->flush();
+
+            $em->remove($applicationRep);
+            $em->flush();
+        }
+
+        $applicationDatas = $entity->getData();
+        if($applicationDatas)
+        {
+            foreach($applicationDatas as $applicationData)
+            {
+                $em->remove($applicationData);
+            }
+            $em->flush();
+        }
+
         $em->remove($entity);
         $em->flush();
 

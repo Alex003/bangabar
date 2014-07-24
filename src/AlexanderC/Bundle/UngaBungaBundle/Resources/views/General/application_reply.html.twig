@@ -57,7 +57,7 @@
 {% endjavascripts %}
 
 <script>
-    $().ready(function () {
+    $(document).ready(function () {
         updateBySubject();
 
         $("#subject").change(function () {
@@ -82,6 +82,7 @@
         var editor = $("#text").data("wysihtml5").editor;
 
         editor.setValue(textTpl, true);
+
     }
 </script>
 

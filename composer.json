@@ -30,7 +30,8 @@
         "iphp/filestore-bundle":"dev-master",
         "symfony/finder": "2.3.*",
         "symfony/dom-crawler": "2.3.*",
-        "symfony/css-selector": "2.3.*"
+        "symfony/css-selector": "2.3.*",
+        "hipaway-travel/mandrill-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

@@ -220,3 +220,10 @@ swiftmailer:
     spool:
         type: service
         id: snc_redis.swiftmailer.spool
+
+
+hip_mandrill:
+    api_key: urPumiIU5CdqJApRWZojzQ
+    default:
+        sender: lebed.tima@gmail.com
+        sender_name: Bangabar

@@ -108,16 +108,34 @@
     </div>
 
     <div class="content-wrapper">
-        <h2 class="spoiler">А почему, а где, а как мне сделать?</h2>
-        <p class="hidden">Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text eve r since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-
-        <h2 class="spoiler">А почему, а где, а как мне сделать?</h2>
-        <p class="hidden">Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text eve r since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-
-        <h2 class="spoiler">А почему, а где, а как мне сделать?</h2>
-        <p class="hidden">Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text eve r since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+        {% for faq in faqs %}
+            <h2 class="spoiler">{{ faq.getTitle }}</h2>
+            <p class="hidden">{{ faq.getContent|raw }}</p>
+        {% endfor %}
 
     </div>
+
+{% endblock %}
+
+
+{% block javascripts %}
+
+    {{ parent() }}
+    <script type="text/javascript">
+        jQuery(".faq_link").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#faq").offset().top
+            }, 2000);
+            return false;
+        });
+
+        jQuery(".faq_link2").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#faq").offset().top
+            }, 2000);
+            return false;
+        });
+    </script>
 
 {% endblock %}
 

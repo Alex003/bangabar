@@ -1,0 +1,38 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{{ path('faq') }}">
+                FAQ
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('faq_new') }}">
+                Добавить FAQ
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('faq_edit', { 'id': entity.id }) }}">
+                Редактировать текущий FAQ
+            </a>
+        </li>
+        <li class="active">Просмотр FAQ</li>
+    </ul>
+
+    <table class="record_properties table table-hover">
+        <tbody>
+        <tr>
+            <th>Заголовок</th>
+            <td>{{ entity.title }}</td>
+        </tr>
+        <tr>
+            <th>Контент</th>
+            <td>{{ entity.content|raw }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+<a href="{{ url('faq_delete',{'id':entity.getId()}) }}" id="form_submit" class="btn btn-primary">Удалить</a>
+
+{% endblock %}

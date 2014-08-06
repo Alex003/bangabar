@@ -173,10 +173,12 @@ class GeneralController extends Controller
 
         $shopEntries = $em->getRepository('UngaBungaBundle:ShopEntry')->findAll();
         $deliveryPoints = $em->getRepository('UngaBungaBundle:DeliveryPoint')->findAll();
+        $faqs = $em->getRepository('UngaBungaBundle:Faq')->findAll();
 
         return $this->render('UngaBungaBundle:General:shop.html.twig', array(
                                                                          'shopEntries' => $shopEntries,
-                                                                         'deliveryPoints' => $deliveryPoints
+                                                                         'deliveryPoints' => $deliveryPoints,
+                                                                         'faqs' => $faqs
                                                                       ));
     }
 

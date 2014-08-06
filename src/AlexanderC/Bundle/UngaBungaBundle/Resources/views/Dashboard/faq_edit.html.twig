@@ -1,0 +1,16 @@
+{% extends '::dashboard_base.html.twig' %}
+{% block body -%}
+
+    <ul class="breadcrumb">
+        <li>
+            <a href="{{ path('faq') }}">
+                FAQ
+            </a>
+        </li>
+        <li class="active">{{ breadcrumb }}</li>
+    </ul>
+    <div class="col-md-8 column">
+        {{ form(form) }}
+    </div>
+
+{% endblock %}

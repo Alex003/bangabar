@@ -1,0 +1,39 @@
+{% extends '::dashboard_base.html.twig' %}
+
+{% block body -%}
+    <ul class="breadcrumb">
+        <li class="active">FAQ</li>
+        <li>
+            <a href="{{ path('faq_new') }}">
+                Добавить FAQ
+            </a>
+        </li>
+    </ul>
+
+    <table class="records_list table table-hover">
+        <thead>
+        <tr>
+            <th>Заголовок</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.title }}</td>
+                <td>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="{{ path('faq_show', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-link"></span></a>
+                        </li>
+                        <li>
+                            <a href="{{ path('faq_edit', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-pencil"></span></a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

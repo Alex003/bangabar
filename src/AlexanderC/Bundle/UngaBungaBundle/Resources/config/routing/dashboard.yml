@@ -8,7 +8,23 @@ settings:
 
 faq:
     pattern: /faq
-    defaults: { _controller: "UngaBungaBundle:Dashboard:faq" }
+    defaults: { _controller: "UngaBungaBundle:Dashboard:faqindex" }
+
+faq_edit:
+    pattern: /faq/{id}/edit
+    defaults: { _controller: "UngaBungaBundle:Dashboard:faqedit" }
+
+faq_show:
+    pattern: /faq/{id}/show
+    defaults: { _controller: "UngaBungaBundle:Dashboard:faqshow" }
+
+faq_new:
+    pattern: /faq/new
+    defaults: { _controller: "UngaBungaBundle:Dashboard:faqnew" }
+
+faq_delete:
+    pattern: /faq/{id}/delete
+    defaults: { _controller: "UngaBungaBundle:Dashboard:faqdelete" }
 
 attachment_upload:
     pattern: /attachment/upload

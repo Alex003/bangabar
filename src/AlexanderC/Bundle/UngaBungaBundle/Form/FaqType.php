@@ -15,6 +15,10 @@ class FaqType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('title', null, array(
+                'label' => 'Заголовок',
+                'required'  => false,
+            ))
             ->add('content', null, array(
                 'label' => 'Контент',
                 'attr' => array('class' => 'wysi'),

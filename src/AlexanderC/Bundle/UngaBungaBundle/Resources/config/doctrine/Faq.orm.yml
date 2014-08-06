@@ -8,6 +8,19 @@ AlexanderC\Bundle\UngaBungaBundle\Entity\Faq:
             generator:
                 strategy: AUTO
     fields:
+        title:
+          type: string
+          nullable: true
         content:
           type: text
           nullable: true
+        created:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: create
+        updated:
+          type: datetime
+          gedmo:
+            timestampable:
+              on: update

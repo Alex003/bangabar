@@ -8,6 +8,7 @@
 namespace AlexanderC\Bundle\UngaBungaBundle\Controller;
 
 
+use AlexanderC\Bundle\UngaBungaBundle\Entity\Faq;
 use AlexanderC\Bundle\UngaBungaBundle\Form\FaqType;
 use AlexanderC\Bundle\UngaBungaBundle\Form\SettingsType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -111,14 +112,34 @@ class DashboardController extends Controller
     }
 
     /**
-     * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\Response
+     * Lists all Customer entities.
+     *
      */
-    public function faqAction(Request $request)
+    public function faqindexAction()
     {
         $em = $this->getDoctrine()->getManager();
 
-        $faq = $em->getRepository("UngaBungaBundle:Faq")->findFirst();
+        $entities = $em->getRepository('UngaBungaBundle:Faq')->findAll();
+
+        return $this->render('UngaBungaBundle:Dashboard:faq_index.html.twig', array(
+            'entities' => $entities,
+        ));
+    }
+
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function faqeditAction(Request $request, $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $faq = $em->getRepository("UngaBungaBundle:Faq")->find($id);
+
+        if (!$faq) {
+            throw $this->createNotFoundException('Unable to find ShopEntry entity.');
+        }
+
         $form = $this->createForm(new FaqType(), $faq, array(
             'method' => 'POST',
         ));
@@ -130,11 +151,69 @@ class DashboardController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($faq);
             $em->flush();
+
+            return $this->redirect($this->generateUrl('faq'));
         }
 
-        return $this->render('UngaBungaBundle:Dashboard:faq.html.twig', array(
-            'settings' => $faq,
-            'form' => $form->createView()
+        return $this->render('UngaBungaBundle:Dashboard:faq_edit.html.twig', array(
+            'entities' => $faq,
+            'form' => $form->createView(),
+            'breadcrumb' => 'Редактирование FAQ'
+        ));
+    }
+
+    public function faqnewAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $entity = new Faq();
+        $form = $this->createForm(new FaqType(), $entity,  array(
+            'method' => 'POST',
+        ));
+
+        $form->add('submit', 'submit', array('label' => 'Сохранить'));
+        $form->handleRequest($request);
+
+        if ($form->isValid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($entity);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('faq_show', array('id' => $entity->getId())));
+        }
+
+        return $this->render('UngaBungaBundle:Dashboard:faq_edit.html.twig', array(
+            'entity' => $entity,
+            'form'   => $form->createView(),
+            'breadcrumb' => 'Добавить FAQ'
+        ));
+    }
+
+    public function faqdeleteAction(Request $request, $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $faq = $em->getRepository("UngaBungaBundle:Faq")->find($id);
+
+        $em->remove($faq);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl('faq'));
+    }
+
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function faqshowAction(Request $request, $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $faq = $em->getRepository("UngaBungaBundle:Faq")->find($id);
+
+        return $this->render('UngaBungaBundle:Dashboard:faq_show.html.twig', array(
+            'entity' => $faq,
         ));
     }
 

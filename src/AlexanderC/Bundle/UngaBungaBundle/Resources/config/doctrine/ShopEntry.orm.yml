@@ -53,4 +53,15 @@ AlexanderC\Bundle\UngaBungaBundle\Entity\ShopEntry:
           columns: [slug]
         shop_entry_price_idx:
           columns: [price]
-
+    manyToMany:
+        delivery_points:
+          targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\DeliveryPoint
+          inversedBy: shop_entrys
+          joinTable:
+            name: shops_deliverys
+            joinColumns:
+              shopentry_id:
+                referencedColumnName: id
+            inverseJoinColumns:
+              deliverypoint_id:
+                referencedColumnName: id

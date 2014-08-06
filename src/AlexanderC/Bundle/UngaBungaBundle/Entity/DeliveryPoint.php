@@ -213,4 +213,42 @@ class DeliveryPoint
     {
         return $this->applications;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $shop_entrys;
+
+
+    /**
+     * Add shop_entrys
+     *
+     * @param \AlexanderC\Bundle\UngaBungaBundle\Entity\ShopEntry $shopEntrys
+     * @return DeliveryPoint
+     */
+    public function addShopEntry(\AlexanderC\Bundle\UngaBungaBundle\Entity\ShopEntry $shopEntrys)
+    {
+        $this->shop_entrys[] = $shopEntrys;
+
+        return $this;
+    }
+
+    /**
+     * Remove shop_entrys
+     *
+     * @param \AlexanderC\Bundle\UngaBungaBundle\Entity\ShopEntry $shopEntrys
+     */
+    public function removeShopEntry(\AlexanderC\Bundle\UngaBungaBundle\Entity\ShopEntry $shopEntrys)
+    {
+        $this->shop_entrys->removeElement($shopEntrys);
+    }
+
+    /**
+     * Get shop_entrys
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getShopEntrys()
+    {
+        return $this->shop_entrys;
+    }
 }

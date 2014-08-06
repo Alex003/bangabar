@@ -44,4 +44,7 @@ AlexanderC\Bundle\UngaBungaBundle\Entity\DeliveryPoint:
             targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\Application
             mappedBy: delivery_point
             cascade: ["all"]
-
+    manyToMany:
+          shop_entrys:
+            targetEntity: AlexanderC\Bundle\UngaBungaBundle\Entity\ShopEntry
+            mappedBy: delivery_points

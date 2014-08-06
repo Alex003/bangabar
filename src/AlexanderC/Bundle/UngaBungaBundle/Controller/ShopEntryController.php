@@ -169,6 +169,7 @@ class ShopEntryController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isValid()) {
+
             $em->flush();
 
             return $this->redirect($this->generateUrl('shopentry_edit', array('id' => $id)));

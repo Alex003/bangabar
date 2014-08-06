@@ -5,9 +5,12 @@ namespace AlexanderC\Bundle\UngaBungaBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\Validator\Constraints\Choice;
+use Symfony\Component\Validator\Constraints\Collection;
 
 class ShopEntryType extends AbstractType
 {
+
         /**
      * @param FormBuilderInterface $builder
      * @param array $options
@@ -27,9 +30,13 @@ class ShopEntryType extends AbstractType
                   ))
             ->add('sale', null, array('label' => 'Распродажа', 'required' => false))
             ->add('bestseller', null, array('label' => 'Хит Продаж', 'required' => false))
-            //->add('slug')
-            //->add('created')
-            //->add('updated')
+            ->add('delivery_points', 'entity', array(
+                 'class' => 'AlexanderC\Bundle\UngaBungaBundle\Entity\DeliveryPoint',
+                 'property'     => 'name',
+                 'multiple'     => true,
+                'expanded' => true,
+                'label' => 'Пункты выдачи'
+            ))
         ;
     }
     
@@ -41,6 +48,7 @@ class ShopEntryType extends AbstractType
         $resolver->setDefaults(array(
             'data_class' => 'AlexanderC\Bundle\UngaBungaBundle\Entity\ShopEntry'
         ));
+
     }
 
     /**

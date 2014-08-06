@@ -281,4 +281,49 @@ class ShopEntry
     {
         return $this->bestseller;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $delivery_points;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->delivery_points = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add delivery_points
+     *
+     * @param \AlexanderC\Bundle\UngaBungaBundle\Entity\DeliveryPoint $deliveryPoints
+     * @return ShopEntry
+     */
+    public function addDeliveryPoint(\AlexanderC\Bundle\UngaBungaBundle\Entity\DeliveryPoint $deliveryPoints)
+    {
+        $this->delivery_points[] = $deliveryPoints;
+
+        return $this;
+    }
+
+    /**
+     * Remove delivery_points
+     *
+     * @param \AlexanderC\Bundle\UngaBungaBundle\Entity\DeliveryPoint $deliveryPoints
+     */
+    public function removeDeliveryPoint(\AlexanderC\Bundle\UngaBungaBundle\Entity\DeliveryPoint $deliveryPoints)
+    {
+        $this->delivery_points->removeElement($deliveryPoints);
+    }
+
+    /**
+     * Get delivery_points
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getDeliveryPoints()
+    {
+        return $this->delivery_points;
+    }
 }
